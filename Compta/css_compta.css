@@ -1,0 +1,192 @@
+/* ==================================================================================== */
+/*                   Mouvement Display : Solde
+/* ==================================================================================== */
+
+div#ComptSolde{
+  width           : 100%;
+  height          : 200px;
+  background      : #C0F0E6;
+  margin-bottom   : 10px;
+  position        : fixed;
+  top             : -180px;
+}
+
+table.Solde{
+  width           : 100%;
+  margin          : auto;
+  margin-bottom   : 10px;
+  border-width    : 5px;
+  border-style    : ridge;
+  border-color    : #191970;
+  color           : #050A49;
+  font-size       : 1.2em;
+}
+table.Solde td{
+  border-width    : 1px;
+  border-style    : solid;
+  border-color    : #191970;
+  text-align      : center;
+  padding         : 0px 5px;
+  min-width       : 10%;
+}
+
+tr.SoldePrev{
+
+}
+tr.SoldeCurr{
+
+}
+tr.SoldeReal{
+
+  color           : #00101A;
+  background-color: #D7EBF7;
+  font-weight     : bold;
+}
+.Solde tr.Mouvement td{
+}
+
+
+/* ==================================================================================== */
+/*                   Mouvement Display : Mouvement
+/* ==================================================================================== */
+table.Mouvement{
+  margin         : auto;
+  border-width   : 5px;
+  border-style   : ridge;
+  border-color   : #008080;
+  font-size      : 12px;
+  width          : 100%;
+}
+table.Mouvement tr{
+  height         : 20px;
+}
+table.Mouvement td{
+  border-width   : 1px;
+  border-style   : solid;
+  border-color   : #008080;
+  vertical-align : middle;
+}
+td.NewPeriode{
+  text-align     : center;
+  height         : 30px;
+  background     : #0B2F3A;
+  color          : #E6E671;
+  font-size      : 14px;
+  font-weight    : bold;
+  border-style   : ridge;
+  border-width   : 4px;
+  border-color   : #E6E671;
+}
+table.Mouvement .Date{
+  width          : 8%;
+}
+table.Mouvement .Escroc{
+  width          : 12%;
+  font-size      : 12px;
+  font-weight    : bold;
+  color          : #800000;
+}
+able.Mouvement .Comm{
+  width          : 36%;
+}
+table.Mouvement .Compte{
+  width          : 10%;
+}
+table.Mouvement .Revenu{
+  width          : 8%;
+}
+table.Mouvement .Depense{
+  width          : 8%;
+}
+table.Mouvement .Debite{
+  width          : 4%;
+}
+table.Mouvement .Debiter{
+  width          : 7%;
+  text-align     : center;
+}
+.Mouvement .Debiter form{
+  margin         : 0;
+}
+}table.Mouvement .Modifier{
+  width          : 7%;
+  text-align     : center;
+}
+.Mouvement .Modifier form{
+  margin         : 0;
+}
+table.Mouvement .Supprimer{
+  width          : 7%;
+  text-align     : center;
+}
+.Mouvement .Supprimer form{
+  margin         : 0;
+}
+
+.SoldePositif{
+  color          : #006400;
+  text-align     : right;
+  padding-right  : 5px;
+  font-size      : 14px;
+  font-weight    : bold;
+  border-color   : #006400;
+}
+.SoldeNegatif{
+  color          : #FF0000;
+  text-align     : right;
+  padding-right  : 5px;
+  font-size      : 14px;
+  font-weight    : bold;
+  border-color   : #FF0000;
+}
+
+tr.NonDebite{
+  background-color: #F5FFD5;
+}
+  
+/* ==================================================================================== */
+/*                 ADD Mouvement
+/* ==================================================================================== */  
+p#ComptAddAnotherRow{
+  border        : 2px solid black;
+  padding       : 10px;
+}
+p#ComptAddAnotherRow:hover{
+  background    : #EFEFEF;
+  cursor        : pointer;
+}
+
+
+/* ==================================================================================== */
+/*                 SET SOLDE                      
+/* ==================================================================================== */  
+table.setSoldeDisplay{
+  border-width   : 5px;
+  border-style   : ridge;
+  border-color   : #0B2F3A;
+  margin         : auto;
+}
+table.setSoldeDisplay td{
+  border-width   : 1px;
+  border-color   : white;
+  border-style   : solid;
+  min-width      : 70px;
+}
+table.setSoldeDisplay th{
+  border-width   : 1px;
+  border-color   : white;
+  border-style   : solid;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

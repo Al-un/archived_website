@@ -1,0 +1,130 @@
+/* ================================================================================ */
+/*  Minisite Display
+/* ================================================================================ */
+
+div#MiniSiteHead{
+  border            : 2px solid #B1FAE8;
+  margin-bottom     : 1%;
+  overflow          : hidden;
+  z-index           : 10;
+}
+
+#MiniSiteHead p{
+  width             : 15%;
+  height            : 3%;
+  min-height        : 20px;
+  float             : left;
+  background        : black;
+  color             : #B1FAE8;
+  margin            : 1px 1%;     /* top/bottom + right/left*/
+  text-align        : center;
+}
+#MiniSiteHead img{
+  float             : right;
+  margin            : auto;
+}
+
+
+
+div.MiniSiteDisp{
+  position          : absolute;
+  width             : 60%;
+  z-index           : 10;
+  margin            : auto;
+  padding           : 15px;
+  left              : -10%;
+  border-style      : outset;
+  border-width      : 2px;
+  border-color      : #B1FAE8;
+  display           : none;
+}
+
+p.SiteName{
+  margin            : auto;
+  text-align        : center;
+  border-bottom     : 1px solid grey;
+}
+p.SiteName a{
+  display           : block;
+  color             : white;
+}
+p.SiteName a:hover{
+  background        : #DDEEEE;
+  color             : black;
+}
+p.Disabled{
+  color             : grey;
+}
+
+table.SiteInfo{
+
+}
+.SiteInfo td{
+  padding           : 0px 15px;
+}
+td.SiteOnline{
+  color             : green;
+}
+td.SiteOffline{
+  color             : red;
+}
+/* ================================================================================ */
+/*  Minisite Admin
+/* ================================================================================ */
+div.MiniSite{
+  margin            : auto;
+  width             : 90%;
+  background        : #A9B9BE;
+  border-color      : #09414D;
+  border-width      : 4px;
+  border-style      : outset;
+  z-index           : 10;
+}
+.MiniSite p{
+  padding           : 1%;
+  font-weight       : bold;
+  background        : #06353D;
+  color             : #B1FAE8;
+}
+.Minisite table{
+  margin            : auto;
+}
+.MiniSite td{
+  padding           : 8px;
+  border-color      : black;
+  border-style      : solid;
+  border-width      : 2px;
+}
+.MiniSite a{
+  color             : black;
+}
+
+div.SiteData{
+  display           : none;
+  margin            : auto;
+  width             : 90%;
+}
+div.SiteLang{
+  display           : none;
+  margin            : auto;
+  width             : 90%;
+}
+div.SiteDesc{
+  display           : none;
+  margin            : auto;
+  width             : 90%;
+}
+.SiteDescEnabled{
+  background        : #F7F0B1;
+}
+.SiteDescDisabled{
+  background        : #75857D;
+}
+div.SiteAuth{
+  display           : none;
+  margin            : auto;
+  width             : 90%;
+}
+div.SiteClose{
+  display           : none;
+}

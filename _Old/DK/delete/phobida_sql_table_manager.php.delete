@@ -1,0 +1,347 @@
+<?php
+
+function ManageTable($sqlTable){
+
+  // $action =(isset($_POST['sqlAction'])) ? $_POST['sqlAction'] : "Display";
+  // switch($action){
+    // case "Add New Item" :  break;
+    // case "Add Item"     : AddItemInsertIntoTable( $sqlTable); break;
+    // case "Display"      : DisplayTable($sqlTable); break;
+    // case "Modify"       : ListTableModify($sqlTable); break;
+    // case "Delete"       : ListTableDelete($sqlTable); break;
+    // default : 
+  // }
+  
+  if (isset($_POST['sqlAction']) && $_POST['sqlAction'] == "Add New Item"){
+    FormItem($sqlTable);
+  }
+  elseif (isset($_POST['sqlAction']) && $_POST['sqlAction'] == "Add Item"){
+    PhpProcessingAddItem($sqlTable);
+  }
+  elseif (isset($_POST['ModifyItem'])){
+    FormItem($sqlTable, TRUE);  // $modify == TRUE
+  }
+  elseif (isset($_POST['sqlAction']) && $_POST['sqlAction'] == "Modify Item"){
+    PhpProcessingModifyItem($sqlTable);
+  }
+  elseif (isset($_POST['DeleteItem'])){
+    DeleteItem($sqlTable);
+  }
+  elseif (isset($_POST['ValidateItem'])){
+    ValidateItem($sqlTable);
+  }
+  else{
+    DisplayTable($sqlTable); 
+  }
+  
+
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Add Item in Sql Table [Form]
+  // =====================================================================================
+function FormItem($sqlTable, $modify = FALSE) {
+
+  GLOBAL $SQL_DATABASE;
+  $sqlAddForm   = "";
+  $fieldName    = "";
+  $fieldType    = "";
+  $fieldKey     = "";
+  $fieldInput   = "";
+  $fieldSubmit  = ($modify) ? "Modify Item" : "Add Item";   // for modification
+  $fieldId      = sql_getIdFieldName($sqlTable);            // for modification
+  $valueId      = (isset($_POST['idItem'])) ? $_POST['idItem'] : ""; // for modification
+  $fieldValue   = "";                                          // for modification
+  $formBackDisp = "
+  <div>
+   <form method='post' action=''>
+    <input type='submit' name='sqlAction' value='Back to Display' style='width:25%;' />
+   </form>
+  </div>";
+  
+  
+  // --------------------------------------------------------------------------- //
+  // ------------------------------ titles ------------------------------------ //
+  // --------------------------------------------------------------------------- //
+    $temp = sql_query("SHOW COLUMNS FROM `".$SQL_DATABASE."`.`".$sqlTable."`");
+    while ($aColumnName = mysql_fetch_assoc($temp)) {
+    
+      // retrieve field data (primary key or not / varchar or decimal)
+      $fieldType = $aColumnName['Type'];
+      $fieldKey  = $aColumnName['Key'];
+      $fieldName = explode("_" , $aColumnName['Field']);
+      $fieldName = $fieldName[1];
+      $fieldName = str_replace("%", " ", $fieldName);
+      
+      // in case of modification retrive value
+      if ($modify){
+        $tempValue = sql_query("SELECT `".$aColumnName['Field']."` FROM `".$SQL_DATABASE."`.`".$sqlTable."` WHERE `".$fieldId."`='".$valueId."'");
+        $arrayValue = mysql_fetch_assoc($tempValue);
+        $fieldValue = $arrayValue[$aColumnName['Field']];
+        $fieldValue = str_replace("'", "&#39", $fieldValue);
+      }
+      
+      if ( $fieldKey == "PRI" ) {
+        $fieldInput = "    <td> (automatic value) </td>\n    <td> ID is not a modifiable field </td>\n";
+      }
+      elseif ( $fieldName == "AvailableRating" OR $fieldName == "Validated"){
+          $fieldInput = "    <td> <select name='".$aColumnName['Field']."'>";
+          $fieldInput .= "<option value='Yes' ".(($fieldValue=="Yes")?"selected":"").">Yes</option>";
+          $fieldInput .= "<option value='No' ".(($fieldValue=="No")?"selected":"").">No</option>";
+          $fieldInput .= "</select></td> <td> </td>";      
+      }
+      elseif ( stristr($fieldType, "varchar") != FALSE ){
+        $fieldLength = explode("(", $fieldType);
+        $fieldLength = explode(")", $fieldLength[1]);
+        $fieldLength = $fieldLength[0];
+        $fieldInput = "    <td> <input type='text' name='".$aColumnName['Field']."' maxlength='".$fieldLength."' value='$fieldValue'/> </td>\n    <td> Max Char. : ".$fieldLength." </td>\n";
+      }
+      elseif ( stristr($fieldType, "decimal")  != FALSE){
+        $fieldLength = explode("(", $fieldType);
+        $fieldLength = explode(",", $fieldLength[1]);
+        $fieldLength = $fieldLength[0] + 1;
+        $fieldInput = "    <td> <input type='text' name='".$aColumnName['Field']."' maxlength='".$fieldLength."' value='".$fieldValue."'/> </td>\n    <td> Max Decimal Length. : ".$fieldLength." (".($fieldLength-3)." + \",\" + 2 decimals)</td>\n";     
+      }
+      elseif (stristr($fieldType, "tinyint")!=FALSE){
+        $fieldLength = 3;
+        $fieldInput = "    <td> <input type='text' name='".$aColumnName['Field']."' maxlength='".$fieldLength."' value='".$fieldValue."'/> </td>\n    <td> Integer between 0 and 255 only)</td>\n";     
+      }
+      elseif (stristr($fieldType, "smallint")!=FALSE){
+        $fieldLength = 3;
+        $fieldInput = "    <td> <input type='text' name='".$aColumnName['Field']."' maxlength='".$fieldLength."' value='".$fieldValue."'/> </td>\n    <td> Integer between 0 and 65535 only)</td>\n";     
+      }
+    
+
+    
+      $sqlAddForm .= "   <tr>\n";
+      $sqlAddForm .= "    <td>".$fieldName."</td>\n";
+      $sqlAddForm .= $fieldInput;
+      $sqlAddForm .= "   </tr>\n";
+      
+    }
+    
+    
+    $sqlIdField = ($modify) ? "<input type='hidden' name='idItem' value='".$valueId."' />" : "";
+    
+    
+  // --------------------------------------------------------------------------- //
+  // ------------------------------ Display ------------------------------------ //
+  // --------------------------------------------------------------------------- //
+echo("
+<div>
+
+ ".$formBackDisp."
+  <form method='post' action=''>
+  <table border='1' style='margin:auto;'>
+   <tr>  <th> Field </th>  <th> Value </th>  <th> Comment </th>  </tr>
+".$sqlAddForm."
+".$sqlIdField."    <tr> <td colspan=3 style='text-align:center;'> <input name='sqlAction' type='submit' value='".$fieldSubmit."' style='width:80%;'/> </td>
+  </table>
+  </form>
+ ".$formBackDisp."
+</div>
+");
+
+}
+
+
+  
+  
+  
+  
+ 
+  
+  
+  
+ 
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Add Item in Sql Table [PHP processing]
+  // =====================================================================================
+function PhpProcessingAddItem($sqlTable){
+
+  GLOBAL $SQL_DATABASE;
+  $temp    = sql_query("SHOW COLUMNS FROM `".$SQL_DATABASE."`.`".$sqlTable."`");
+  $valueList;
+  
+  // retrive data
+  while ($aColumnName = mysql_fetch_assoc($temp)) {
+    if ( $aColumnName['Key'] != "PRI") {
+      $valueList[$aColumnName['Field']] = PostData($aColumnName['Field']);
+    }
+  }
+  sql_insert($valueList, $sqlTable);
+  DisplayTable($sqlTable);
+} 
+  
+  
+  
+  
+  
+  
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Modify Item in Sql Table [PHP processing]
+  // =====================================================================================
+function PhpProcessingModifyItem($sqlTable){
+
+  GLOBAL $SQL_DATABASE;
+  $temp    = sql_query("SHOW COLUMNS FROM `".$SQL_DATABASE."`.`".$sqlTable."`");
+  $valueList;
+  $idValue = PostData('idItem');
+  
+  // retrive data
+  while ($aColumnName = mysql_fetch_assoc($temp)) {
+    if ( $aColumnName['Key'] != "PRI") {
+      $valueList[$aColumnName['Field']] = PostData($aColumnName['Field']);
+    }
+  }
+  sql_update($valueList, $sqlTable, $idValue);
+  DisplayTable($sqlTable);
+
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Delete Item from Sql Table [PHP processing]
+  // =====================================================================================
+function DeleteItem($sqlTable){
+
+  $idField    = sql_getIdFieldName($sqlTable);
+  $delete     = sql_delete($idField, PostData('idItem'), $sqlTable);
+  DisplayTable($sqlTable);
+  return $delete;
+}   
+  
+  
+  
+  
+  
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Validate Item from Sql Table [PHP processing]
+  //  >>>>>>>>>>>>>>>>>         set the value of validated field fro "No" to "Yes"
+  // =====================================================================================
+function ValidateItem($sqlTable){
+
+  GLOBAL $SQL_DATABASE;
+  $idField    = sql_getIdFieldName($sqlTable);
+  $idValue    = PostData('idItem');
+  $validQuery = "UPDATE `".$SQL_DATABASE."`.`".$sqlTable."` SET `Txt_Validated`='Yes' WHERE `".$idField."`='".$idValue."'";
+  $valid      = sql_query($validQuery);
+  DisplayTable($sqlTable);
+  return $valid;
+} 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Display a Sql Table
+  // =====================================================================================
+
+function DisplayTable($sqlTable){
+  
+
+  GLOBAL $SQL_DATABASE, $sqlPho_MenuRating;
+  
+  $formAddItem  = "
+  <div>
+    <form method='post' action=''>
+     <input type='submit' name='sqlAction' value='Add New Item' style='width:25%;' />
+    </form>
+  </div>";
+  $sqlHeader    = "";
+  $fieldName    = "";
+  $sqlData      = "";
+  $sqlSingleRow = "";
+  $idField      = "";
+ 
+    
+  // --------------------------------------------------------------------------- //
+  // ------------------------------ titles ------------------------------------ //
+  // --------------------------------------------------------------------------- //
+    $temp    = sql_query("SHOW COLUMNS FROM `".$SQL_DATABASE."`.`".$sqlTable."`");
+    $allTableFields  = "";
+    $sqlHeader      = '   <tr>';
+
+    while ($aColumnName = mysql_fetch_assoc($temp)) {
+    
+      // id field?
+      if ($aColumnName['Key'] == "PRI"){
+        $idField = $aColumnName['Field'];
+      }
+    
+      // retrieve field data
+      $fieldName = explode("_" , $aColumnName['Field']);
+      $fieldName = (isset($fieldName[1])) ? $fieldName[1] : $fieldName[0];
+      $fieldName = str_replace("%", " ", $fieldName);
+      $sqlHeader .=('    <th>'.$fieldName.'</th>');
+      $allTableFields  .= '`'.$aColumnName['Field'].'`,';
+      
+    }
+    $allTableFields=substr($allTableFields, 0, strlen($allTableFields)-1);
+    if ($sqlTable == $sqlPho_MenuRating){
+      $sqlHeader .= "    <th> Validate </th>\n";
+    }
+    $sqlHeader .= "    <th> Modify </th>\n";
+    $sqlHeader .= "    <th> Delete </th>\n";
+    $sqlHeader .= '   </tr>';
+
+
+  // --------------------------------------------------------------------------- //
+  // ------------------------------ Content -------------------------------- //
+  // --------------------------------------------------------------------------- //
+  $allItemRaw = sql_query("SELECT ".$allTableFields." FROM `".$SQL_DATABASE."`.`".$sqlTable."`");
+
+    while ($aItem=mysql_fetch_assoc($allItemRaw)) {  
+      $sqlSingleRow = "    <tr> <form method='post' action=''>";
+      foreach($aItem as $key => $value) {
+        $sqlSingleRow .= '      <td>'.$value.'</td>';
+      }
+      $sqlSingleRow .= "    <input type='hidden' name='idItem' value='".$aItem[$idField]."' />";
+      if ($sqlTable == $sqlPho_MenuRating){
+        $sqlSingleRow .= "    <td> <input type='submit' name='ValidateItem' value='Validate' /> </td>\n";
+      }
+      $sqlSingleRow .= "    <td> <input type='submit' name='ModifyItem' value='Modify' /> </td>\n";
+      $sqlSingleRow .= "    <td> <input type='submit' name='DeleteItem' value='Delete' /> </td>\n";
+      $sqlSingleRow .= "    </form></tr>\n";
+      $sqlData  .= $sqlSingleRow;
+    }
+
+
+  // --------------------------------------------------------------------------- //
+  // ------------------------------ Display -------------------------------- //
+  // --------------------------------------------------------------------------- //
+echo("
+<div>
+".$formAddItem."
+  <table border='1' style='margin:auto;'>
+".$sqlHeader."
+".$sqlData."
+  </table>
+ ".$formAddItem."
+</div>
+");
+
+}
+
+?>

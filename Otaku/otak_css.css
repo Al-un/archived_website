@@ -1,0 +1,157 @@
+﻿/* ==================================================================================== */
+/*                 GLOBAL CSS                        
+/* ==================================================================================== */
+body{    
+  color             : #FFFFFF;
+  margin            : 0;
+  color             : white;
+  background-color  : black;
+}
+
+div#Xsy_Glob_Page{
+  width               : 78%;
+  margin              : auto;/
+}
+#Xsy_Glob_Page a{
+  color               : #00eaff;
+}
+  
+  
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Left{
+  width             : 10%;
+  float             : left;
+  position          : fixed;
+  color             : #00eaff;
+}
+
+div#Xsy_Glob_Left a{
+  color             : white;
+}
+
+
+div#homepage{  
+  opacity           : 0.8;
+}
+#homepage img{
+  width             : 90%;
+}
+
+
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Right{
+  float             : right;
+  width             : 10%;
+}
+
+/* ============================ LANGUAGE =========================== */
+p.Xsy_Admin_CheckLanguage{
+  display           : none;
+}
+/* ============================ LOGIN FORM  ======================== */
+div.loginform{
+  width             : 90%;
+  margin            : auto;
+  font-size         : 0.8em;
+}
+div.loginform form{
+  width             : 85%;
+  padding           : 1%;
+  margin            : auto;
+}
+div.loginform p{
+  margin            : auto;
+  width             : 40%;
+  float             : left;
+}
+div.loginform input.input{
+  width             : 55%;
+  margin            : auto;
+  display           : block;
+  color             : cyan;
+  background-color  : navy;
+  border-style      : ridge;
+  border-width      : 2px;
+  border-color      : blue;
+  font-size         : 0.8em;
+}
+
+div.loginform input.submit{
+  width             : 100%;
+  margin            : auto;
+  display           : block;
+  background        : #010F28;
+  border            : 2px ridge #6297F2;
+  color             : #00eaff;
+  font-size         : 0.9em;
+}
+
+div.loginform a{
+  width            : 90%;
+  display          : block;
+  margin           : auto;
+  margin-bottom    : 5px;
+  margin-top       : 5px;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+  text-decoration  : none;
+  text-align       : center;
+}
+div.logged{
+  margin           : auto;
+  margin-top       : 14px;
+  margin-bottom    : 14px;
+  text-align       : center;
+}
+div.logged p{
+  margin            : 0;
+  width             : 100%;
+  float             : none;
+}
+
+
+/* ==================================================================================== */
+/*                 ANIME
+/* ==================================================================================== */
+div.otak_anime{
+  width             : 90%;
+  margin-left       : 5%;
+  margin-bottom     : 20px;
+  border            : 1px solid white;
+}
+
+.otak_anime p.title{
+  background        : #333333;
+  margin            : auto;
+  height            : 40px;
+  font-size         : 30px;
+  padding-top       : 6px;
+  padding-left      : 20px;
+}
+.otak_anime div.charac{
+  width             : 20%;
+background:blue;
+}
+.otak_anime div.otak_anime_sub{
+  width             : 94%;
+  margin-left       : 6%;
+background:red;
+}
+
+/* ==================================================================================== */
+/*                 FOOTER
+/* ==================================================================================== */
+div#Otak_Footer{
+
+}
+
+
+
+
+
+

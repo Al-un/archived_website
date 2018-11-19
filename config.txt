@@ -1,0 +1,4 @@
+all folder and files should be in 755 permissions
+
+For uploading, writing permissions should be granted. + executed... 777 permissions 
+for HongKong/background/

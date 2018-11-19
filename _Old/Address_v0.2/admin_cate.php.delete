@@ -1,0 +1,214 @@
+﻿<?php
+$level = 0;
+// ====================================================================
+// ==========  Table and field data
+// ====================================================================
+$addrTable    = (!isset($addrTable))    ? $sqlTable_AddrCate : $addrTable;
+$addrLevel    = (!isset($addrLevel))    ? $addrCateLevel     : $addrLevel;
+$addrField    = (!isset($addrField))    ? "Txt_CateType"     : $addrField;
+$addrNamField = (!isset($addrNamField)) ? "Txt_CateName"     : $addrNamField;
+$addrOrder    = (!isset($addrOrder))    ? "Int_CateOrder"    : $addrOrder;
+$addrMainId   = (!isset($addrMainId))   ? "ID_AddrCate"      : $addrMainId;
+$addrRelId    = (!isset($addrRelId))    ? "Int_CateId"       : $addrRelId;
+
+
+// ====================================================================
+// ==========  Form management
+// ====================================================================
+
+
+if (isset($_POST['AddAddr'])){
+  $insertData[$addrNamField]  = $_POST[$addrNamField];
+  $insertData[$addrField]     = $_POST[$addrField];
+  $rawAddrRelId = Xsy_Sql_FetchAll("SELECT MAX(".$addrRelId.") as maxId FROM `$SQL_DATABASE`.`$addrTable` WHERE `".$addrField."`='".$_POST[$addrField]."'");
+  $rawAddrOrder = Xsy_Sql_FetchAll("SELECT MAX(".$addrOrder.") as maxOrder FROM `$SQL_DATABASE`.`$addrTable` WHERE `".$addrField."`='".$_POST[$addrField]."'");
+  $insertData[$addrRelId]     = $rawAddrRelId[0]['maxId']     + 1;
+  $insertData[$addrOrder]     = $rawAddrOrder[0]['maxOrder']  + 1 ;
+  Xsy_Sql_Insert($SQL_DATABASE, $addrTable, $insertData);
+}
+if (isset($_POST['AddrNameAdded'])){
+  $insertNameData['Txt_TranslateTable'] = $addrTable;
+  $insertNameData['Id_Table%Item']      = Xsy_Glob_Get('entryId');
+  $insertNameData['Id_Language']        = Xsy_Glob_Get('langId');
+  $insertNameData['Txt_Item%Name']      = Xsy_Glob_Get('entryName');
+  Xsy_Sql_Insert($SQL_DATABASE, $sqlTable_AddrTranslateShort, $insertNameData);
+}
+
+if (isset($_POST['AddrNameUpdated'])) {
+  $updateNameData['Txt_Item%Name'] = Xsy_Glob_Get('entryName');
+  Xsy_Sql_Update($SQL_DATABASE, $sqlTable_AddrTranslateShort, $updateNameData, $_POST['entryId']);
+}
+
+if (isset($_POST['AddrDelete'])){
+  Xsy_Sql_Delete($SQL_DATABASE, $addrTable, $addrMainId, $_POST['entryId']);
+}
+if (isset($_POST['AddrNameDel'])){
+  Xsy_Sql_Delete($SQL_DATABASE, $sqlTable_AddrTranslateShort, 'ID_AddrTranslateShort', $_POST['entryId']);
+}
+
+// ====================================================================
+// ==========  Form for creating
+// ====================================================================
+
+$addAddrEntryForm = "  <div class='AddrAdminPopup'>
+    <div class='AddrAdminModal'>
+      <form method='post' action=''>
+        <p> Select Addr Level : </p>
+        <select name='".$addrField."'>
+          <option value='".$addrLevel[0]['Value']."'> ".$addrLevel[0]['Value']." </option>
+          <option value='".$addrLevel[1]['Value']."'> ".$addrLevel[1]['Value']." </option>
+          <option value='".$addrLevel[2]['Value']."'> ".$addrLevel[2]['Value']." </option>
+        </select>
+        <p> Enter Addr Entry Name </p>
+        <input type='text' name='".$addrNamField."' size='20' />
+        <p> Translation will be added later by 'Add Name' button. However this name cannot be modifie;d </p>
+        <input type='submit' name='AddAddr' value='Add' />
+      </form>
+    <p> <a href=''> Go Back </a> </p>
+    </div>
+  </div>\n";
+
+
+if (isset($_POST['AddrNameAdd'])){
+  $rawAddrEntry = Xsy_Sql_FetchAll("SELECT `$addrNamField` FROM `$SQL_DATABASE`.`$addrTable` WHERE `".$addrMainId."`='".$_POST['entryId']."'");
+
+  $addAddrNameForm = "    <div class='AddrAdminPopup'>
+   <div class='AddrAdminModal'>
+   <p> Entry Name : <b>".$rawAddrEntry[0][$addrNamField]."</b> </p>
+   <form method='post' action=''>
+    <p> Language : </p>
+    <input type='hidden' name='entryId' value='".$_POST['entryId']."' />
+    <select name='langId'>\n";
+
+  foreach($XSY_LANG as $langId => $langEntry){ $addAddrNameForm .= "     <option value='".$langId."'> ".$langEntry['Name']." </option>\n"; }
+
+  $addAddrNameForm .= "    </select>
+    <p> Translated name </p>
+    <input type='text' name='entryName' value='' size='20' />
+    <input type='submit' name='AddrNameAdded' value='Add Addr Name' />
+   </form>
+    <p> <a href=''> Go Back </a> </p>
+   </div>
+  </div>\n";
+}
+
+
+if (isset($_POST['AddrNameUpd'])){
+  $rawAddrEntry = Xsy_Sql_FetchAll("SELECT * FROM `$SQL_DATABASE`.`$sqlTable_AddrTranslateShort` WHERE `ID_AddrTranslateShort`='".$_POST['entryId']."'");
+
+  $updAddrNameForm = "  <div class='AddrAdminPopup'>
+    <div class='AddrAdminModal'>
+   <form method='post' action=''>
+    <p> Entry Language : <b>".$XSY_LANG[$rawAddrEntry[0]['Id_Language']]['Name']."</b> </p>
+    <input type='hidden' name='entryId' value='".$_POST['entryId']."' />
+    <input type='text' name='entryName' value='".$rawAddrEntry[0]['Txt_Item%Name']."' size='20' />
+    <input type='submit' name='AddrNameUpdated' value='Update Addr Name' />
+   </form>
+    <p> <a href=''> Go Back </a> </p>
+   </div>
+  </div>\n";
+}
+// ====================================================================
+// ==========  display
+// ====================================================================
+for($level=0; $level<3; $level++){
+
+  // retrive data
+  $rawAddr[$level] = Xsy_Sql_FetchAll("SELECT * FROM `$SQL_DATABASE`.`$addrTable` WHERE `".$addrField."` = '".$addrLevel[$level]['Value']."' ORDER BY `".$addrOrder."`");
+
+  // initialize text
+  $txtAddr[$level] = "  <div id='AddrLevel".$level."' class='AddrLevel'> <p class='AddrTitle'> Level ".$level." : ".$addrLevel[$level]['Value']." </p>
+   <div class='AddrLevelItem'>
+    <div class='AddrForm'> Edtion </div>
+    <div class='AddrAbsCate AddrId'> Abs. ID </div>
+    <div class='AddrRelCate AddrId'> Rel. ID </div>
+    <div class='AddrOrder AddrId'> Order </div>
+    <div class='AddrTranslt'>  </div>
+
+   </div>";
+
+  // display data
+  foreach($rawAddr[$level] as $key=>$entry){
+
+    $txtAddr[$level] .= "   <div id='Item".$entry[$addrMainId]."' class='AddrLevelItem'>
+    <div class='AddrForm'>
+      <form method='post' action=''>
+        <input type='hidden' name='entryId' value='".$entry[$addrMainId]."' />
+        <input type='submit' name='AddrNameAdd' value='Add Name' />
+        <input type='submit' name='AddrDelete' value='Delete' />
+      </form>
+    </div>
+    <div class='AddrAbsCate AddrId'> ".$entry[$addrMainId]."</div>
+    <div class='AddrRelCate AddrId'>".$entry[$addrRelId]."</div>
+    <div class='AddrOrder AddrId'> ".$entry[$addrOrder]."</div>
+    <div class='AddrTranslt'>\n";
+
+    // retrieve translation
+    $rawAddrTranslt   = Xsy_Sql_Query("
+        SELECT  *
+        FROM    `$SQL_DATABASE`.`$sqlTable_AddrTranslateShort`, `$SQL_DATABASE`.`$sqlTable_all_languages`
+        WHERE   `$sqlTable_AddrTranslateShort`.`Id_Language` = `$sqlTable_all_languages`.`ID_Language`
+        AND     `$sqlTable_AddrTranslateShort`.`Txt_TranslateTable` = '$addrTable'
+        AND     `$sqlTable_AddrTranslateShort`.`Id_Table%Item` = '".$entry[$addrMainId]."'
+        ORDER BY `$sqlTable_AddrTranslateShort`.`Id_Language`");
+
+    if (Xsy_Sql_RowCount($rawAddrTranslt) > 0){
+      // for each translation
+      foreach($rawAddrTranslt as $key=>$transltEntry){
+        $txtAddr[$level] .= "   <div>\n    <p> <i>".$transltEntry['Txt_Lang%Name']."</i> <br /> ".$transltEntry['Txt_Item%Name']." </p>
+    <form method='post' action=''>
+      <input type='hidden' name='entryId' value='".$transltEntry['ID_AddrTranslateShort']."' />
+      <input type='submit' name='AddrNameUpd' value='Upd' />
+      <input type='submit' name='AddrNameDel' value='X' />
+    </form>
+   </div>\n";
+      }
+    }
+    else{
+        $txtAddr[$level] .= "<p> <i> N/A </i> <br /> no translation </p>\n";
+    }
+
+    $txtAddr[$level] .= "    </div>
+
+   </div>\n";
+
+  }
+
+  // end text
+  $txtAddr[$level] .= "  </div>";
+}
+
+
+
+// ====================================================================
+// ==========  display
+// ====================================================================
+
+echo("  <div style=' width: 20%; margin:auto; padding: 5px;'>
+    <form method='post' action=''>
+      <input type='submit' name='DisplayAddForm' value='Add Entry' style='width:100%;'/>
+    </form>
+  </div>\n");
+
+if (isset($_POST['DisplayAddForm'])){
+  echo($addAddrEntryForm);
+}
+if (isset($_POST['AddrNameAdd'])){
+  echo($addAddrNameForm);
+}
+
+if (isset($_POST['AddrNameUpd'])){
+  echo($updAddrNameForm);
+}
+for($level=0; $level<3; $level++){
+  echo($txtAddr[$level]);
+}
+
+?>
+
+
+
+
+
+
+

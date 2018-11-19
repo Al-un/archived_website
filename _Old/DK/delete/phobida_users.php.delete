@@ -1,0 +1,7 @@
+﻿<?php
+$adminRequired = TRUE;
+include('../Tools/phobida_header.php');
+echo("<p>Don't forget to save password under sha1 format (<a href='http://www.sha1.fr/'>http://www.sha1.fr/</a>). It is not automatically handled.</p>");
+ManageTable($sqlPho_UserAccount);
+include('../Tools/phobida_footer.php');
+?>

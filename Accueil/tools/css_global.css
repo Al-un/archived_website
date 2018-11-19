@@ -1,0 +1,205 @@
+/* ==================================================================================== */
+/*                 GLOBAL CSS                        
+/* ==================================================================================== */
+body{
+  margin            : 0;
+  color             : white;
+  background-color  : #06101c;
+  z-index           : -4;
+}
+
+
+div#HomeContent{
+  background-image    : url('/Accueil/img/Home_Content_Back.png');
+  background-size     : 100% 100%;
+  z-index             : -3;
+}
+
+div#HomeBan{
+  margin              : auto;
+  width               : 68%;
+  text-align          : center;
+}
+
+
+div#Xsy_Glob_Page{
+  width               : 68%;
+  margin              : auto;
+  color               : white;
+  z-index             : -2;
+}
+#Xsy_Glob_Page a{
+  color               : #00eaff;
+}
+
+
+div#FakeBackground{
+  position            : relative;
+  width               : 100%;
+  z-index             : 0;
+}
+#FakeBackground img{
+  width               : 100%;
+  height              : 100%;
+}
+img#FakeBackGroundBot{
+  position            : absolute;
+  width               : 68%;
+  margin-bottom       : 55%;
+  z-index             : 0;
+}
+div#FakeContent{
+  position            : relative;
+  width               : 90%;
+  margin              : auto;
+  margin-bottom       : 20px;
+  z-index             : 1;
+}
+
+
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Left{
+  width             : 14%;
+  float             : left;
+  color             : #00eaff;  
+}
+
+div#Xsy_Glob_Left a{
+  color             : white;
+}
+
+
+div#homepage{  
+  opacity           : 0.8;
+}
+#homepage img{
+  width             : 90%;
+}
+
+div#homepage a{
+  color             : white;
+}
+  
+
+  
+  
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Right{
+  float             : right;
+  width             : 14%;
+}
+
+/* ============================ LANGUAGE =========================== */
+div.language{
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : cyan;
+  text-align       : center;
+  height           : 20px;
+}
+  
+/* ============================ LOGIN FORM  ======================== */
+div.loginform{
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : cyan;
+}
+div.loginform form{
+  width            : 85%;
+  padding          : 10% 5%;
+  margin           : auto;
+  margin-bottom    : 12px;
+  text-align       : left;
+  border-bottom    : 1px solid cyan;
+}
+div.loginform p{    
+  margin           : auto;
+  text-align       : center;
+}
+div.loginform input.input{
+  width            : 100%;
+  margin           : auto;
+  display          : block;
+  color            : cyan;
+  background-color : navy;
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : blue;
+}
+div.loginform input.check{
+  margin-left      : 8%;
+}
+div.loginform input.submit{
+  width            : 100%;
+  margin           : auto;
+  display          : block;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+}
+
+div.loginform a{
+  width            : 90%;
+  display          : block;
+  margin           : auto;
+  margin-bottom    : 5px;
+  margin-top       : 5px;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+  text-decoration  : none;
+  text-align       : center;
+}
+div.logged{
+  margin           : auto;
+  margin-top       : 14px;
+  margin-bottom    : 14px;
+  text-align       : center;
+}
+
+/* ==================================================================================== */
+/*                 FOOTER                      
+/* ==================================================================================== */
+/*
+div.footer{
+  width           : 70%;
+  margin          : auto;
+  margin-top      : 10px;
+  text-align      : center;
+  border          : none;
+}
+*/
+
+div#Home_Footer{
+  color             : grey;
+  background-image  : url('/Accueil/img/Home_Footer_Back.png');
+  background-size   : 100% 100%;                    /* CSS 3 featuring */
+  /*background        : red;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

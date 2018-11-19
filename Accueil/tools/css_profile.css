@@ -1,0 +1,26 @@
+/* ================================================================================ */
+/*  Profile Modification
+/* ================================================================================ */
+
+div.register{
+  width           : 80%;
+  margin          : auto;
+  margin-bottom   : 3%;
+}
+
+.register table{
+  margin          : auto;
+  background      : #04193C;
+}
+
+.register input{
+  background      : #011C4B;
+  color           : #A0DBF7;
+}
+
+.register input.button{
+  width           : 100%;
+  text-align      : center;
+  background      : #022F3B;
+  color           : #51A6B0;
+}

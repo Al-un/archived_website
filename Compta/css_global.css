@@ -1,0 +1,127 @@
+/* ==================================================================================== */
+/*                   GLOBAL                      
+/* ==================================================================================== */
+body{
+  background      : #B0E0E6;
+  color           : black;
+  margin          : 0;
+  font-size       : 0.7em;
+}
+
+div#Xsy_Glob_Page{
+
+}
+  
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */  
+div#Xsy_Glob_Left{
+  display         : none;
+}
+
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Right{
+  width        : 10%; 
+  float        : right;
+  color        : #C4EBEA;
+  font-size      : 0.8em;
+}
+div#Xsy_Glob_Right a{
+  color        : #C4EBEA;
+ }
+/* ============================ LANGUAGE =========================== */
+div.language{
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : white;
+  text-align    : center;
+}
+  
+
+div.loginform{
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : white;
+}
+.loginform img.input{
+  width        : 5%;
+  min-width      : 20px;
+}
+.loginform input.input{
+  width        : 80%;
+  background-color  : navy;
+  color        : #00FFE5;
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : blue;
+}
+.loginform input.check{
+}
+.loginform input.submit{
+  width        : 95%;
+  margin      : auto;
+}
+  
+/*====================================== BODY =============================== */  
+div.sommaire{
+  margin      : auto;
+  margin-top  : 15px;
+}
+
+.sommaire p{
+  margin      : auto;
+  text-align    : center;
+}
+
+.sommaire table{
+  margin          : auto;
+  border-width    : 3px;
+  border-style    : inset;
+  border-color    : white;
+  text-align        : center;
+  width          : 90%;
+  background      : #2F4F4F;
+}
+.sommaire th{
+  background      : #00008B;   /* Dark Blue */
+  color          : #48D1CC;  /* Medium Turquoise*/
+}
+.sommaire td{
+  background      : #1E90FF;   /* DodgerBlue  */
+  width          : 12%;
+}
+.sommaire a{
+  color          : black;
+  display        : block;
+}
+.sommaire a:hover{
+  color          : white;
+}
+.sommaire td:hover{
+  background    : #00008B;
+}
+
+/*                 FOOTER                      
+/* ==================================================================================== */
+div.footer{
+  width          : 70%;
+  margin        : auto;
+  margin-top    : 10px;
+  text-align      : center;
+  border        : none;
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

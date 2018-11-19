@@ -1,0 +1,24 @@
+/* ======================= A UPDATE ======================= */
+div.update{
+  margin        : auto;
+  width         : 95%;
+  border-style  : ridge;
+  border-width  : 4px;
+  border-color  : #151B54;
+}
+
+div.update p.title{
+  margin        : auto;
+  border-bottom : groove 3px #151B54;
+}
+
+div.update span.datetime{
+  text-size     : small;
+}
+
+
+div.update p.update{
+  margin        : auto;
+  padding-left  : 10px;
+  padding-right : 10px;
+}

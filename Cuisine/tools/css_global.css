@@ -1,0 +1,178 @@
+/*====================================== GLOBAL CSS =============================== */
+body{
+  background-image	: url("/Cuisine/img/background.jpg");	 	
+}
+	
+
+div.page{
+  position			: absolute;
+  left				: 12%;
+  width 			: 71%;
+  min-height		: 100%;
+  margin			: auto;
+  padding			: 0% 2%;
+	 	
+  background-color	: #8B0000;
+  border-style		: double;
+  border-width		: 0px;
+  border-color		: #FFD700;
+  color				: #FFD700;	 	
+}	
+	 
+
+/*====================================== LEFT SIDE CSS =============================== */	
+div.left{
+  float				: left;
+  width				: 10%;
+}
+
+#homepage img{
+  width				: 90%;
+}
+
+/*====================================== RIGHT SIDE CSS =============================== */
+div.right{
+  position			: absolute;
+  right				: 0%;
+  width				: 12%;
+  color				: #00eaff;
+}
+
+
+div.language{
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: white;
+	text-align			: center;
+}
+	
+
+div.loginform{
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: white;
+}
+.loginform input{
+	background-color	: navy;
+	color				: cyan;
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: blue;
+}
+	 
+
+/************  page accueil *************/
+	.intro p{
+	 	margin				: 30px;
+	 	text-indent			: 20px;
+	 }
+	.intro ul{
+	 	margin				: 30px;
+	 	text-indent			: 00px;
+	 	list-style			: circle;
+	 }
+	.intro a:link{
+	 	text-decoration		: none;
+	 	color				: #FFFF00;
+	}
+	.intro a:visited{
+	 	text-decoration		: none;
+	 	color				: #FFFF00;
+	}
+	.intro a:hover{
+	 	text-decoration		: underline;
+	 	color				: #00FFCC;
+	 	font-weight			: bold;
+	 }
+	.intro h2{
+	 	text-align			: center;
+	 	background-color	: #C9001A;
+	}
+
+
+/************* la page recette **********/
+	/*** le menu à gauche ***/
+	/*
+	div.miam_menu{
+	 	float				: left;
+	 	background			: #AC0000;
+	 	border-style		: inset;
+	 	border-width		: 4px;
+	 	border-color		: #ffde00;
+	 	
+	 	padding-top			: 0px;
+	 	padding-bottom		: 10px;
+	 	margin-bottom		: 20px
+	 	margin-left			: 0px;
+	 	width				: 240px;
+	 	font-size			: 12px;
+	}
+
+	.miam_menu p{
+	 	color: #00FF7F;
+	 	background-color	: #970000;
+	 	font-weight			: bold;
+	 	font-size			: 16px;
+	 	text-indent			: 10px;
+	 }
+	ul.nom_recette{
+	 	background			: #AC0000;
+	 }
+	.miam_menu a:link{
+	 	text-decoration		: none;
+	 	color				: #F7F12F;
+	}
+	.miam_menu a:visited{
+	 	text-decoration		: none;
+	 	color				: #F7F12F;
+	}
+	.miam_menu a:hover{
+	 	text-decoration		: underline;
+	 	color				: seashell;
+	 	font-weight			: bold;
+	}
+*/
+
+	 
+/*************** Le livre d'or ******/
+/*
+	table.post{
+	 	margin				: auto;
+	}
+	td.pseudo{
+	 	width 				: 70px;
+	 	height				: 15px;
+	 	background-color	: crimson;
+	 }
+	td.date{
+	 	width				: 500px;
+	 	height				: 15px;
+	 	background-color	: crimson;
+	 }
+	td.post{
+	 	width				: 500px;
+	 	background-color	: crimson;
+	 }	 
+	
+	p.post{
+	 	text-align			: center;
+	}
+	.post a:link{
+	 	text-decoration		: none;
+	 	color				: #F7F12F;
+	}
+	.post a:visited{
+	 	text-decoration		: none;
+	 	color				: #F7F12F;
+	}
+	.post a:hover{
+	 	text-decoration		: underline;
+	 	color				: seashell;
+	 	font-weight			: bold;
+	 	background-color	: crimson;
+	}
+	 */	 
+	 
+	 
+	 
+	 

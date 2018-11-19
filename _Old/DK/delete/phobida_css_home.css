@@ -1,0 +1,37 @@
+
+/*
+  - color name are taken from website:  http://www.quackit.com/html/html_color_codes.cfm
+*/
+
+div#Phobida_Home{
+  width           : 100%;
+  margin          : auto;
+}
+
+#Phobida_Home img.Home_Background{
+  width           : 100%;
+  z-index         : -2;
+}
+
+
+#Phobida_Home div#Phobida_Home_Desc{
+  position        : absolute;
+  width           : 500px;
+  height          : 138px;
+  margin-left     : 35%;
+  margin-top      : -138px;
+  padding         : 0;
+}
+
+#Phobida_Home_Desc img{
+  position        : absolute;
+  width           : 100%;
+  z-index         : -1;
+}
+#Phobida_Home_Desc p{
+  width           : 80%;
+  height          : 15%;
+  margin          : auto;
+  margin-top      : 80px;
+  text-align      : center;
+}

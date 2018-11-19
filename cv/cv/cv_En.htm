@@ -1,0 +1,238 @@
+﻿<?php
+function moreButton($idButton){
+  echo("<img src='/CV/cv/img/detail_fr.gif' id='More$idButton' alt='More Details' height='10px' title='for further information'/>");
+}
+function moreDiv($idDetail){
+  echo("    <div class='detail' id='Detail$idDetail'>\n    <p class='detailLogo'>Details</p>\n");
+}
+
+?>
+<p style='width:80%; margin:auto;'>Please feel free to click on the "for further information" button to display more details.<br />
+You can also get a PDF version (with less details of course) <a href='files/Seng_Alain_CV_En.pdf' style='color:white;'> here </a>.</p>
+
+<!-- ============================  PERSONAL DATA  ========================== -->
+<div class = 'someData' id='PersonalData'>
+ <p class='title' id='titlePersonalData'>Personal Data</p>
+ <p> SENG Alain 
+ <br /> 24 years old in 2012 (born 12<sup>th</sup> August 1988)
+ <br />
+ <br /> <img src='img/icon_phone.png' height='15' width='15' alt='Phone' /> <span style='margin-left:2px' >  +33 (0)6 25 27 65 11 </span>
+ <br /> <img src='img/icon_email.png' height='15' width='15' alt='Email' /> <span style='margin-left:2px' > <a href='mailto:Alain.Seng@mines-nancy.org'>Alain.Seng@mines-nancy.org </a></span>
+ <br />
+ <br /> <img src='img/icon_address.png' height='15' width='15' alt='Address' />  <span style='margin-left:2px' > 3 rue Lucien Piron </span>
+ <br /> <span style='margin-left:20px' > 93110 Rosny-sous-Bois </span>
+ <br /> <span style='margin-left:20px' > FRANCE </span>
+ <br />
+ <br /> <img src='img/icon_website.png' height='15' width='15' alt='Website' />  <span style='margin-left:2px' > <a href = "http://xsylum.free-h.net">http://xsylum.free-h.net</a> </span>
+ <br /> <img src='img/icon_deviantart.png' height='15' width='15' alt='DeviantArt' /> <span style='margin-left:2px' > <a href='http://xsylum.deviantart.com/'>  http://xsylum.deviantart.com/ </a> </span>
+ </p>
+</div>
+
+<!-- ===============================  SCHOOL  ============================== -->
+<div class = 'someData' id='SchoolData'>
+  <p class='title' id='titleSchoolData'>Education</p>
+  
+  <p> <?php moreButton('MinesNancy'); ?> 2008-2012 - <a href='http://www.mines.inpl-nancy.fr/international/v_angl/e_index.htm'> Ecole des Mines de Nancy </a> one of the top French engineering universities</p>
+    <?php moreDiv('MinesNancy'); ?>
+    <table border = "0">
+    <tr><td>2011-2012</td><td> <i>Ecole des Mines de Nancy</i>, Third Year, major in IT field</td></tr>
+    <tr><td>2010-2011</td><td> Off-cycle internship in <a href='http://www.soldatagroup.com/'>SolData Asia Ltd</a> (groupe Vinci) &agrave; Hong Kong</td></tr>
+    <tr><td>2009-2010</td><td> <i>Ecole des Mines de Nancy</i>, Second Year, major in IT</td></tr>
+    <tr><td>2008-2009</td><td> <i>Ecole des Mines de Nancy</i>, First Year, common-core syllabus</td></tr>
+    </table>
+  </div>
+  
+  <p> <?php moreButton('SaintLouis'); ?> 2006-2008 - <a href='http://lyc-saint-louis.scola.ac-paris.fr/'> Lyc&eacute;e Saint Louis (French website)</a> Intensive preparation for the competitive entrance examination to prestigious French engineering universities</p>
+    <?php moreDiv('SaintLouis'); ?>
+    <table border = "0">
+    <tr><td>2007-2008</td><td> <i>Classe pr&eacute;paratoire aux Grandes Ecoles</i> 2<sup>nd</sup> Year: Mathematics, Physics, Computer Science</td></tr>
+    <tr><td>2006-2007</td><td> <i>Classe pr&eacute;paratoire aux Grandes Ecoles</i> 1<sup>st</sup> Year: Mathematics and Physics</td></tr>
+    </table>
+  </div>
+  
+  <p> <?php moreButton('SaintMichel'); ?> 2005-2008 - Lyc&eacute;e Saint Michel </p>
+    <?php moreDiv('SaintMichel'); ?>
+    <table border = "0">
+    <tr><td>June 2006</td><td> <i>Baccalaur&eacute;at Scientifique</i> (scientific national high school leaving diploma at 18) passed with honors</td></tr>
+    </table>
+  </div>
+  
+</div>
+
+<!-- ================================  JOBS  =============================== -->
+<div class = 'someData' id='JobData'>
+  <p class='title' id='titleJobData'>Professional Experience</p>
+  
+  <p> <?php moreButton('SolData'); ?> Off-cycle internship at <a href='http://www.soldatagroup.com/'>SolData Asia Ltd</a> 
+  <br /> July 2010 - July 2011 (12 months), HONG KONG </p>
+  <p> I was a hybrid engineer: my missions concerned IT and site engineering at the same time, from monitoring projects to the deployment of a VMware based virtualization system. SolData Asia belongs to the <a href='http://www.vinci.com/vinci.nsf/en/index.htm'>Vinci Group</a></p>
+  <?php moreDiv('SolData'); ?>
+    <p>We can separate this year in three parts:
+  
+  <div>
+  <ul>
+    <li> <p>Virtualization Project: <br />
+      I was asked to set up a new virtualization server. Indeed, each monitoring project required a calculation server. Due to monitoring projects size in Hong Kong, a single desktop was enough. However, we needed a desktop each time we have a new project. Thus, migrating to a virtualization will improve It management, makes monitoring projects deployment easier and faster and everything will be centralized. <br />
+    I was charged of this project from the very beginning to the end. The very beginning was an analysis: what was SolData Asia requirements? Then I had to meet these requirements. I finally chose a Dell hardware configuration coupled with a <a href='http://www.vmware.com/solutions/smb/index.html'>VMware vSphere Essential</a>. At the same time, I had to subscribe to related services: proper broadband, email-to-sms conversion service and 3G USB dongles.<br />
+    After accouting checkings, I had to organize deliveries (more or less at the same time) and then mount the server. After mounting and connecting the hardware and all the redundancies, I had to do basic set up for the firmwares (EqualLogic disk array, network switch). I can now install OS (VMware ESXi 4.1, Windows Server 2008 R2) and VMware. Afterwards, the backup (disk back up and tape back up) had to be configured. I can also configure our own firewall and set up a VPN to manage external access to the system.<br />
+    The lasted (and longest) part was handover. I had to do a tidy configuration so that if someone has a look on it, he can easily understand my configuration. I also wrote some handover files (how-to documents for instance).</p>
+    </li>
+    
+    <li> <p>Monitoring Project :<br />
+      This involves both IT and site engineering. Before the virtualization system, we had to deploy a whole calculation server. We actually get a desktop. After installing the OS and basic software, we have to install SolData software. The next step is configuration. According to the client expectation, we set up some configuration and need to test it. This also implies a cross-over with the site configuration. I had to be on site to install the theodolites (a measuring instrument) and check the prisms installation. <br />
+    I was on a MTR project. <a href='http://www.mtr.com.hk/eng/homepage/cust_index.html'>MTR</a> is the railway company in Hong Kong. We had to add a specific reporting tool developed in VBA (Reports were in Excel Format).</p>
+    </li>
+    
+    <li> <p>Development Project:<br />
+     Micron II is the next SolData wireless datalogger. However, the current interface was not suitable for a site deployment. Thus, I had to do a basis for the interface software. This project was coded in Qt, a C++ framework. I had to focus on low level layer (communication with the datalogger and Application, ie the protocol itself). All interface-related would be subcontracted later. However, I couldn't help do some interfaces. I did a basis one to show how my software works. <br />
+     For my handover, I provided class diagram, use case diagram and a Doxygen documentation.</p></li>
+  
+  </ul>
+  </div>
+  </p>
+  </div>
+  
+  <p> <?php moreButton('Matmut'); ?> Summer Job at <a href='http://www.matmut.fr/'> Matmut </a> (French website)
+  <br /> July 2009 (5 weeks), Torcy, FRANCE </p>
+  <p> Administrative officer </p>
+  <?php moreDiv('Matmut'); ?>
+    <p> My main task was to copy inspector's report in an appropriate format. After inspection, they estimate the damages and consider if the insurance has to refund or not. I was also a switchboard operator and every morning I help with sorting incoming mails.</p>
+  </div>
+  
+  <p> <?php moreButton('AdvancedCoating'); ?> Internship at <a href='http://http://www.advanced-coating.com/english/presentation-company.htm'>Advanced Coating</a> 
+  <br /> January 2009 - March 2009 (6 weeks), Li&egrave;ge, BELGIUM </p>
+  <p> In order to understand technical backgrounds, we have to do an internship as a worker during six weeks. Advanced Coating is specialized in spraying. My chain was a copper spray for electric cupboard. I was at the end of the chain </p>
+  <?php moreDiv('AdvancedCoating'); ?>
+    <p>Everymetallic bars which underwent spraying got some copper mark. My job consisted in cleaning these bars up to get rid of those marks. Then I had to put them into boxes and move the boxes if necessary. I was sometimes assigned to some "factory upkeep" tasks.</p>
+  </div>
+  
+  <p> <?php moreButton('Amf'); ?> Summer Job at <a href='http://www.amf-assurances.fr/'> AMF </a> (French website)
+  <br /> July 2005 (4 weeks), Paris, FRANCE </p>
+  <p> AMF is a French insurance company specialized in state employee insurance</p>
+  <?php moreDiv('Amf'); ?>
+    <p> I was in the mail service. Every morning, we had to sort incoming mails and dispatch them into proper services. The afternoon was dedicated to prepare mail sending (advertisement and complaint).</p>
+  </div>
+  
+</div>
+
+<!-- ================================   IT   =============================== -->
+<div class = 'someData' id='ItData'>
+  <p class='title' id='titleItData'>IT skills</p>
+  <table border = "0">
+  <tr> <td> Programmation </td>   <td> Java, Qt (Framework C++)</td></tr>
+  <tr> <td> Web Development </td> <td> HTML4, xHTML1, PHP, CSS2, MySQL, Javascript (jQuery)</td></tr>
+  <tr> <td> Bureautique </td>     <td> Microsoft Office (Word, Excel, PowerPoint)</td></tr>
+  <tr> <td> Software </td>        <td> Few knowledge in <a href='http://www.vmware.com/fr/solutions/company-size/smb/index.html'>VMware vSphere Essential</a> </td> </tr>
+  </table>
+</div>
+
+<!-- ============================   LANGUAGES   ============================ -->
+<div class = 'someData' id='LangData'>
+  <p class='title' id='titleLangData'>Languages</p>
+  <table border = "0">
+  <tr><td> French   </td> <td><img src='/CV/cv/img/fr.gif' width='30' title='French' alt='French' /></td>  <td> Monther tongue</td>  </tr>
+  <tr><td> English  </td> <td><img src='/CV/cv/img/en.gif' width='30' title='English' alt='English' /></td> <td> Professional skills and good oral communication</td> </tr>
+  <tr><td> Chinese  </td> <td><img src='/CV/cv/img/cn.gif' width='30' title='Mandarin' alt='Mandarin' /></td><td> Intermediate (mandarin)</td> </tr>
+  <tr><td> Japanese </td> <td><img src='/CV/cv/img/jp.gif' width='30' title='Japanese' alt='Japanese'/></td><td> Beginner</td> </tr>
+  <tr><td> Spanish  </td> <td><img src='/CV/cv/img/es.gif' width='30' title='Spanish' alt='Spanish'/> </td><td> Beginner</td> </tr>
+  </table>
+</div>
+
+<!-- =========================   STUDENT ORG   ============================= -->
+<div class = 'someData' id='AssoData'>
+  <p class='title' id='titleAssoData'>Student associations</p>
+  
+  <img src='img/logo_animest.png' style='float:left; width:60px; margin-top:40px;'/>
+  <div style='margin-left:70px;margin-bottom:30px;'>
+    <p> <a href='http://www.animest.net/'>Anim'Est, biggest convention on Japanese culture in the East (of France). </a></p>
+  <dl>
+    <!-- Anim'Est no Haru 2010 -->
+    <dt> Anim'Est no Haru 2010 (Spring of Anim'Est)</dt>
+      <dd> <?php moreButton('Animest2010'); ?> Former Staff
+      <?php moreDiv('Animest2010'); ?>
+    <p> As I am officially retired, I can keep doing my trainer task. With more experience, I have a different point of view on the organisation and the structure of Anim'Est. However, I was not allowed to interfere in the new council's decisions. Moreover, for Anim'Est 2010, Anim'Est will change it status, becoming a real voluntary association (an association under the French law, a law voted in 1901). Then, Anim'est can get more visibility.
+      </div>
+      </dd>
+    
+    <!-- Anim'Est 2009 vivent les sous! -->
+    <dt> Anim'Est 2009 </dt>
+      <dd> <?php moreButton('Animest2009'); ?> Treasurer, Interschool Communication  and Internal Communication (within the <i>Ecole des Mines</i>), Recruitment manager
+    <?php moreDiv('Animest2009'); ?>
+    <p> As far as I am concerned, I think Treasurer allowed me to have an overall point of view on Anim'Est. Of course, president would have been a better position. However, I prefered to focus on a specific task: communication. During the preparation year, my treasurer duty was not so important so that I can allocate some time to internal communication (within my own school with other students and the administration) and interschool communication (how to exchange information and to confront opinions between two different schools). Due to the lack of staff within my school, I also had the recruitment responsability. Consequently, I also did the training for the newly coming staff. After the 2009 edition, I kept doing my trainer job, from advising to an overview from a great distance.</p>
+      </div>
+      </dd>
+    
+    <!-- Anim'Est 2008, larbinage -->
+    <dt> Anim'Est 2008 </dt>
+      <dd> <?php moreButton('Animest2008'); ?> Staff member during the two days convention.
+    <?php moreDiv('Animest2008'); ?>
+    <p> For the first year, we are staff member. Having a two hours rotation per position, we can see many aspect of the convention. From the selling ticket at the entrance to the kitchen (we sell a home made Japanese food), we leart the different branches of Anim'Est (Food, Culture, Animation, Fanzine...). Thus for the second we can choose a responsability after seeing it in action. </p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+  <img src='img/logo_minesServices.jpg' style='float:left; width:100px;'/>
+  <div style='margin-left:110px;margin-bottom:30px;'>
+    <p> <a href='http://eleves.mines.inpl-nancy.fr/~junior/'> Mines Services, la Junior Entreprise de l'Ecole des Mines de Nancy </a> </p>
+  <dl>
+    <dt> Mines Services 2009/2010 </dt>
+      <dd> <?php moreButton('Je2009'); ?> Internal Communication Manager and Event Organizer
+    <?php moreDiv('Je2009'); ?>
+    <p> The Junior Enterprise may be the most professional association within an Engineering university. The idea is simple: some company have some requirements which can be met by the <i>Ecole des Mines</i> students. Our job consist is join both of them. We act like an intermediate between the client (a company) and the service provider (a student). However, my job consisted in internal communication rather than external communication. Thus, as internal communication involves contact with students and administration, I was also in charge of the event organization. Most of our event should have a professional impact (meeting between companies and students, lecture, workshop...) </p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+   <img src='img/logo_gala.jpg' style='float:left; width:100px;'/>
+  <div style='margin-left:110px;min-height:140px;'>
+    <p> <a href='http://eleves.mines.inpl-nancy.fr/~ndm/'> The <i>Nuit des Mines</i>, the Gala of the <i>Ecole des Mines de Nancy</i> </a> </p>
+  <dl>
+    <dt> <i>Nuit des Mines</i> 2010 </dt>
+      <dd> <?php moreButton('Gala2010'); ?> DTP (official poster for the event)
+    <?php moreDiv('Gala2010'); ?>
+    <p> Actually, I was not a member of this association. However, for the Junior-Enterprise, I did few posters. By seeing this, the Gala association asked me to do the official poster for the 2010 edition. I accepted as I did it as a service: using my skills in order to try to meet their requirement and.</p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+</div>
+
+<!-- =============================   LEISURE   ============================= -->
+<div class = 'someData' id='LeisureData'>
+  <p class='title' id='titleLeisureData'>Leisure</p>
+  
+  <div>
+  <ul>
+  <li> <?php moreButton('Dessin'); ?>   Pencil Drawing (pencils only, A5-A4 format): <a href='http://xsylum.deviantart.com/'> my DeviantArt </a> 
+      <?php moreDiv('Dessin'); ?>
+      <p> I didn't enjoy Drawing before. But by drawing more and more, I realized that I really love it. I only draw with pencils for the moment but I will try different art: chinese ink, graphic tablets, video are some projects. I learnt a lot by drawing: patience and passion for instance. Moreover, I have learnt a lot on myself by paying attention on my drawing style. The way I do the stroke, the way I do the shading and the way I do the lineart are the details which can unveil some aspects of my personality. Drawing exercises can also be consider, in some way, as mental exercises. Indeed, to my mind, drawing is not only a matter of skills or pencils, it also involves our mental, our point of view on ourself.</p>
+      </div>
+  </li>
+  <li> <?php moreButton('Ecriture'); ?> Writing
+    <?php moreDiv('Ecriture'); ?>
+      <p> I only write in French because I don't consider that my English is good enough to sustain my writing skills in English. As I only write in French, I won't develop too much on writing (see my CV in French). What I like the most in writing is to play with words, to discover their real meaning when you combine it when other words. By playing on the meaning, the pronunciation and the shape, writing may reach a form of beauty which can equals a very good pencil drawing. However, this beauty belongs to another style which is very interesting to discover. I may say that drawing is showing whereas writing is explaining. </p>
+      </div>
+  </li>
+  <li> <?php moreButton('Billard'); ?>  Billards
+    <?php moreDiv('Billard'); ?>
+      <p> I like billard by taste of challenge. No matter I am playing 8-pool or 9-pool, I like try weird things such as jump or border. Just for fun, I like trying. </p>
+      </div>
+  </li>
+  <!--
+  <li> <?php moreButton('Break'); ?>    Breakdance
+    <?php moreDiv('Break'); ?>
+      <p>  </p>
+      </div>
+  </li>
+  -->
+  <li> <?php moreButton('Cuisine'); ?>  Cooking
+    <?php moreDiv('Cuisine'); ?>
+      <p> I like eating and I like discover new tastes. As I grow in France in a Chinese family, I have discovered such a variety of taste. Even if I am not such a good cook, I like trying to mix taste to reach new recipes. As I sometimes lack imagination (see my Drawing part), this is a good opportunity to reach new discoveries.</p>
+      </div>
+  </li>
+  </ul>
+  </div>
+</div>

@@ -1,0 +1,298 @@
+/* ==================================================================================== */
+/*                 GLOBAL CSS                        
+/* ==================================================================================== */
+body{    
+
+/*
+  background-position  : top;
+  color        : #00eaff;
+  background-color  : black;*/
+  margin            : 0;
+  color             : white;
+  background-color  : black;
+}
+
+
+div#HomeBan{
+  margin              : auto;
+  margin-top          : 0;
+  width               : 68%;
+  text-align          : center;
+}
+
+
+div#Xsy_Glob_Page{
+  width               : 78%;
+  margin              : auto;
+}
+#Xsy_Glob_Page a{
+  color               : #00eaff;
+}
+
+
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Left{
+  width             : 10%;
+  position          : fixed;
+  float             : left;
+}
+
+div#Xsy_Glob_Left a{
+  color             : white;
+}
+
+
+div#homepage{  
+  opacity           : 0.8;
+}
+#homepage img{
+  width             : 90%;
+}
+
+div#homepage a{
+  color             : white;
+}
+  
+
+  
+  
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Right{
+  width             : 10%;
+  position          : fixed;
+  margin-left       : 90%;
+}
+
+/* ============================ LANGUAGE =========================== */
+div.language{
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : cyan;
+  text-align       : center;
+  height           : 20px;
+}
+  
+/* ============================ LOGIN FORM  ======================== */
+div.loginform{
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : cyan;
+}
+div.loginform form{
+  width            : 85%;
+  padding          : 10% 5%;
+  margin           : auto;
+  margin-bottom    : 12px;
+  text-align       : left;
+  border-bottom    : 1px solid cyan;
+}
+div.loginform p{    
+  margin           : auto;
+  text-align       : center;
+}
+div.loginform input.input{
+  width            : 100%;
+  margin           : auto;
+  display          : block;
+  color            : cyan;
+  background-color : navy;
+  border-style     : ridge;
+  border-width     : 2px;
+  border-color     : blue;
+}
+div.loginform input.check{
+  margin-left      : 8%;
+}
+div.loginform input.submit{
+  width            : 100%;
+  margin           : auto;
+  display          : block;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+}
+
+div.loginform a{
+  width            : 90%;
+  display          : block;
+  margin           : auto;
+  margin-bottom    : 5px;
+  margin-top       : 5px;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+  text-decoration  : none;
+  text-align       : center;
+}
+div.logged{
+  margin           : auto;
+  margin-top       : 14px;
+  margin-bottom    : 14px;
+  text-align       : center;
+}
+
+/* ==================================================================================== */
+/*                 FOOTER                      
+/* ==================================================================================== */
+/*
+div.footer{
+  width           : 70%;
+  margin          : auto;
+  margin-top      : 10px;
+  text-align      : center;
+  border          : none;
+}
+*/
+
+div#Home_Footer{
+  color             : black;
+  /*background        : red;*/
+}
+/* ==================================================================================== */
+/*                 NO AUTH                      
+/* ==================================================================================== */
+div.MemoNoAuth{
+  text-align      : center;
+  padding         : 2px;
+  background      : white;
+  border          : 3px outset darkred;
+  color           : darkred;
+  margin          : 12% auto;
+  width           : 80%;
+  font-size       : 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================== */
+/*                          Summary
+/* ================================================================== */
+table#MemoSummary{
+  margin            : auto;
+  width             : 90%;
+}
+#MemoSummary td{
+  width             : 23%;
+  text-align        : center;
+}
+#MemoSummary a{
+  padding           : 1%;
+  display           : block;
+}
+#MemoSummary a:hover{
+  background        : #111122;
+}
+
+
+/* ================================================================== */
+/*                          Administration (pop up)
+/* ================================================================== */
+
+div#Xsy_Sql_Modal{
+  width             : 50%;
+}
+#Xsy_Sql_Modal table{
+  width             : 100%;
+}
+#Xsy_Sql_Modal input, select, textarea{
+  width             : 100%;
+}
+#Xsy_Sql_Modal textarea{
+  height            : 300px;
+}
+/* ================================================================== */
+/*                          Display memo
+/* ================================================================== */
+div.memoContent{
+  width             : 96%;
+  margin            : 10px auto;
+  border            : 1px white solid;
+  margin-bottom     : 10px;
+}
+p.memoContentTitle{
+  background        : darkred;
+  text-indent       : 25px;
+  padding           : 4px;
+}
+
+div.memoContentMngt{
+  float             : right;
+  width             : 15%;
+}
+.memoContentMngt form input{
+  width             : 80%;
+  margin            : 4px auto;
+  padding           : 1%;
+}
+div.memoContentText{
+  float             : none;
+  width             : 64%;
+  min-height        : 120px;
+  margin-left       : 20%;
+}
+
+div.memoContentInfo{
+  float             : left;
+  width             : 20%;
+}
+
+
+
+/* ==================================================================================== */
+/*                 SORT BY CATE
+/* ==================================================================================== */
+div.memoCate{
+  width             : 94%;
+  padding           : 1%;
+  margin            : 15px auto;
+  background        : #112211;
+  border            : 1px solid white;
+}
+.memoCate p{
+  color             : white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

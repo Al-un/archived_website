@@ -1,0 +1,17 @@
+﻿<?php
+$addrRelTable = $sqlTable_AddrRelCity;
+$addrTable    = $sqlTable_AddrCity;
+$addrLevel    = $addrCityLevel;
+$addrField    = "Txt_CityType";
+$addrRelId    = "Int_CityId";
+$addrName     = "Txt_CityName";
+$addrTabId    = "ID_AddrRelCity";
+include_once("admin_relcate.php");
+?>
+
+
+
+
+
+
+

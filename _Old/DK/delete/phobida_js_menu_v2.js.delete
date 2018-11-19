@@ -1,0 +1,47 @@
+/*********************************************************************************************
+ *                 INITIALIZE VARIABLES
+ *********************************************************************************************/
+var currentCateId = 0;
+
+/*********************************************************************************************
+ *                 WHEN PAGE LOADING IS FINISHED
+ *********************************************************************************************/
+ 
+$(document).ready(function(){
+
+  // initialize page after loading is finished
+  // $("div.MenuCateContent").hide();
+  // $("div#ClickBack").hide();
+
+
+
+  // if a MenuCate is hovered
+  
+  $('div[id^="MenuCate"]').hover(
+    function() {
+      $(this).css('background-color', 'green');
+    },
+    function() {
+      $(this).css('background-color', '#FFFFF0');
+    });
+  
+
+  // if a MenuCate is clicked
+  $('div[id^="MenuCate"]').click(function() {
+  
+    currentCateId = $(this).attr('id').substring(8);
+    $('div.MenuCate').hide(100);
+    $('div.MenuCateContent.').hide(100);
+    $('div#ClickBack').show(100);
+    $('div#MenuCate'+currentCateId).show(100);
+    $('div#MenuCateContent'+currentCateId).show(100);
+  });
+  
+  // button to display back all categories
+  
+  
+});
+ 
+ 
+ 
+ 

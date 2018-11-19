@@ -1,0 +1,13 @@
+	body{
+		width			: 1000px;
+		margin			: auto;
+		border			: 2px solid blue;
+		padding			: 20px;
+		background		: #33FFFF;
+	}
+	
+	table{
+		margin			: auto;
+		margin-top 		: 20px;
+		margin-bottom	: 20px;
+	}

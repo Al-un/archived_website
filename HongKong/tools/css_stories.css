@@ -1,0 +1,101 @@
+/* ========================== A STORY =============================== */
+div.story{
+    width         : 90%;
+    margin        : 25px 0;
+}
+
+/* =========================== A TITLE =============================== */
+.story p.title{
+    margin        : auto;
+    padding-top   : 4px;
+    padding-bottom: 4px;
+    background    : rgba(25, 15, 70, 0.6);
+    padding-left  : 20px;    
+}
+.story p.title:hover{
+    background    : rgba(220, 230, 185, 0.6);
+    
+}
+.story p.title a{
+    color          : white;
+}
+.story p.title a:hover{
+    color         : black;
+}
+
+
+/* =========================== A CONTENT ============================= */
+.story p.content{
+    margin        : auto;
+    padding-top   : 10px;
+    padding-bottom: 10px;
+    background    : rgba(5, 15, 70, 0.6);
+    padding-left  : 30px;    
+}
+
+
+/* =========================== A TAG ================================= */
+.story p.tag{
+    margin        : auto;
+    background    : rgba(100, 100, 200, 0.3);
+    font-size     : small;
+    padding-left  : 20px;    
+}
+.story p.tag a{
+    color        : white;
+}
+
+/* =========================== A DATE/COMMENT ======================== */
+.story p.datecomment{
+    margin        : auto;
+    background    : rgba(100, 100, 200, 0.3);
+    font-size     : small;
+    font-style    : italic;
+    padding-left  : 20px;    
+}
+.story p.datecomment a{
+    color         : white;
+}
+
+
+/* =========================== A FORM TO ADD COMMENT ================== */
+.story div.form{
+    width         : 90%;
+    margin        : auto;
+    border-style  : ridge;
+    border-width  : 5px;
+    border-color  : #043E54;
+}
+
+
+/* =========================== AND THEN THE COMMENT ================== */
+div.comment{
+    width         : 90%;
+    margin        : auto;
+    margin-top    : 20px;
+    margin-bottom : 20px;
+}
+.story a.comment{
+    color         : #BBFEF9;
+}
+.comment p.author{
+    margin        : auto;
+    padding-top   : 2px;
+    padding-bottom: 2px;
+    background    : rgba(5, 30, 60, 0.5);
+    padding-left  : 20px;       
+}
+.comment p.comment{
+    margin        : auto;
+    padding-top   : 6px;
+    padding-bottom: 6px;
+    background    : rgba(10, 60, 80, 0.5);
+    padding-left  : 20px;    
+}
+.comment p.date{
+    margin        : auto;
+    background    : rgba(100, 100, 200, 0.3);
+    font-size     : small;
+    font-style    : italic;
+    padding-left  : 20px;     
+}

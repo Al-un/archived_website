@@ -1,0 +1,80 @@
+/************** leftside **********/
+div.left{
+  width				: 15%;
+  float				: left;
+}
+div.left a{
+}
+div#homepage{	
+  opacity			: 0.8;
+}
+#homepage img{
+  width				: 90%;
+}
+	
+	 
+/************** le login **********/
+	div.login{
+		margin					: auto;	
+		margin-bottom		: 30px;
+	}	
+	.login p{
+	 	text-align			: center;
+	 }
+	.login a:link{
+	 	color				: #FFFF00;
+	}
+	.login a:visited{
+	 	color				: #FFFF00;
+	}
+	.login a:hover{
+	 	text-decoration		: underline;
+	 	color				: seashell;
+	 	font-weight			: bold;
+	}
+
+	.login table{
+	 	font-size			: 12px;
+	 	margin				: auto;
+	 }
+	 
+	 .login td{
+	  	width				: 40px;
+	  	padding-left		: 5px;
+	  	padding-right		: 5px;
+	  }
+
+/* menu honrizontal */
+	.menu ul{
+	 	margin					: auto;
+	 	list-style-type	: none;x	
+	 }
+	 .menu li{
+	  width						: 85%;  
+		line-height			: 20px;
+		padding					: 4px;
+		padding-left		: 8px;
+		margin-bottom		: 4px;
+		text-align			: left;
+		background			: #E8001F;
+		border-width		: 6px;
+		border-style		: groove;
+		border-color		: #FF8C00;
+	}
+	.menu a:link{
+	 	text-decoration	: none;
+	 	color						: #FFFF00;
+	}
+	.menu a:visited{
+	 	text-decoration	: none;
+	 	color						: #FFFF00;
+	}
+	.menu li:hover{
+	 	background			: #93074D;
+	 	text-decoration	: underline;
+	 	color						: #00FFCC;
+	 	font-weight			: bold;
+		border-width		: 6px;
+		border-style		: ridge;
+		border-color		: #054BED;
+	 }

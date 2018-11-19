@@ -1,0 +1,5 @@
+﻿<?php
+
+    $description = "<p>This is my very first 'drawing', if you can call it a drawing of course. At that moment, I was in a very famous american restaurant: Mc Donald's. I love the Big Tasty so it naturally comes just in front of me. Then I wanted to draw what I have eaten however my skills could not, at that moment, let me draw my love for the Big Tasty. How sad I was, so I left the drawing unfinished without the main character. What a horrible stuff, isn't it. I should try to draw some burger again to see if I have improved myself since this day...</p><p>My brother offered me this Zap Book. It was before my first and second year of uni (actually, \"Math & Physic preparation for engineering schools examination\"). He advised me to do some sketch when I failed my homeworks or when I was blocked during exam preparations...It happened so often that I did many sketch. Just touch the pen to change my mind. Since that moment, it became a passion and even sometimes an addiction.</p>"; 
+
+?>

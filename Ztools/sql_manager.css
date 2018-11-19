@@ -1,0 +1,85 @@
+/*************************************************************/
+/*                    GENERAL                                
+/*************************************************************/
+div.sqlManager_Table{
+  width                 : 100%;
+  margin-bottom         : 4px;
+  border-width          : 2px;
+  border-style          : outset;
+  border-color          : #14AAFF;
+}
+
+.sqlManager_Table table{
+  margin                : auto;
+}
+
+
+
+div.sqlManager_TableMngt{
+
+}
+.sqlManager_TableMngt table{
+  width                 : 100%;
+}
+.sqlManager_TableMngt td{
+  width                 : 50%;
+}
+.sqlManager_TableMngt p{
+  margin                : auto;
+}
+.sqlManager_TableMngt p:hover{
+  margin                : auto;
+  color                 : #000000;
+  background            : #FFFFFF;
+}
+
+
+div.sqManager_TableInfo{
+  display               : none;
+}
+div.sqManager_TableData{
+  display               : none;
+}
+div.sqlManage_TableEntry{
+  display               : none;
+  overflow              : scroll;
+  max-height            : 500px;
+}
+
+/*************************************************************/
+/*                    POP UP Forms                                
+/*************************************************************/
+div#Xsy_Sql_Popup{
+  visibility        : hidden;
+  position          : fixed;
+  width             : 100%;
+  height            : 100%;
+  z-index           : 1;
+  background        : rgba(0, 0, 0, 0.7);
+}
+div#Xsy_Sql_Modal{
+  position          : fixed;
+  width             : auto;
+  height            : auto;
+  margin            : auto;
+  background        : black;
+  color             : white;
+  border            : 2px inset white;
+  padding           : 2%;
+}
+#Xsy_Sql_Modal td{
+  padding           : 5px;
+}
+#Xsy_Sql_Modal input.Xsy_Sql_Button{
+  width             : 80%;
+  margin            : auto;
+  display           : block;
+}
+#Xsy_Sql_Modal a{
+  color             : #DCDCDC; /* grey */
+}
+div#Xsy_Sql_Form{
+  display           : none;
+}
+
+

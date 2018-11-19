@@ -1,0 +1,155 @@
+/* ==================================================================================== */
+/*                   GLOBAL                      
+/* ==================================================================================== */
+body{
+  background        : black;
+  color             : white;
+  margin            : 0;
+}
+
+div#Xsy_Glob_Page{
+  margin-top        : 20px;
+}
+  
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */  
+div#Xsy_Glob_Left{
+  width             : 80%;
+  position          : absolute;
+  overflow          : hidden;
+
+}
+div#Xsy_Glob_Left a{
+  color             : #C4EBEA;
+}
+div#homepage{
+  height            : 50px;
+}
+#homepage img{
+  height            : 90%;
+  float             : left;
+}
+div#SiteAdmin{
+
+}
+div.AdminLink{
+  float             : left;
+  width             : 10%;
+  text-align        : center;
+}
+div.AdminLink:hover{
+  background        : #00351E;
+}
+
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+div#Xsy_Glob_Right{
+  z-index         : 2;
+  width           : 20%;
+  height          : 10%;
+  margin-left     : 80%;
+  color           : #C4EBEA;
+  font-size       : 0.8em;
+
+}
+div#Xsy_Glob_Right a{
+  color          : #C4EBEA;
+ }
+ 
+ 
+div#SommaireDroite{
+ 
+}
+#SommaireDroite input{
+  background      : none;
+  color          : white;
+}
+ 
+ div.sommairePays{
+ 
+ }
+ div.sommaireVille{
+  margin-left      : 15%;
+ }
+ 
+ 
+ 
+ 
+/* ============================ LANGUAGE =========================== */
+div.language{
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : white;
+  text-align        : center;
+}
+  
+
+div.loginform{
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : white;
+}
+.loginform p{
+  float           : left;
+  width           : 40%;
+  margin          : auto;
+}
+.loginform img.input{
+  width           : 5%;
+  min-width       : 20px;
+}
+.loginform input.input{
+  width          : 50%;
+  background-color  : navy;
+  color            : #00FFE5;
+  border-style    : ridge;
+  border-width    : 2px;
+  border-color    : blue;
+}
+.loginform input.check{
+}
+.loginform input.submit{
+  width        : 95%;
+  margin        : auto;
+}
+  
+/*====================================== BODY =============================== */  
+
+
+  
+/* ==================================================================================== */
+/*                 FOOTER                      
+/* ==================================================================================== */
+div.footer{
+  width          : 70%;
+  margin        : auto;
+  margin-top    : 10px;
+  text-align      : center;
+  border        : none;
+}
+  
+/* ==================================================================================== */
+/*                 Before page                      
+/* ==================================================================================== */
+div#sommaire{
+  margin          : auto;
+  height          : 30px;
+  width          : 70%;
+  text-align        : center;
+}
+div#sommaire a{
+  color          : white;
+}
+div#sommaire ul{
+  margin          : 0;
+}
+#sommaire li{
+  display        : block;
+  width          : 15%;
+  border          : 1px solid grey;
+}  
+#sommaire li:hover{
+  background      : blue;
+}s

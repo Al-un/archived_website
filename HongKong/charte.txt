@@ -1,0 +1,10 @@
+//==========================================//
+//============== SQL TABLE =================//
+//==========================================//
+
+##Name:
+-------
+	+ All names in english
+	+ All names in small letters
+	+ id column name is "id_"+tablename without prefix
+	

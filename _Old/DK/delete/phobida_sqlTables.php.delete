@@ -1,0 +1,209 @@
+﻿<?php
+$adminRequired = TRUE;
+include('../Tools/phobida_header.php');
+
+echo("
+<table border='0'>
+  <tr> <td> HTTP_HOST </td> <td> ".$_SERVER['HTTP_HOST']." </td> </tr>
+  <tr> <td> DATABASE </td> <td>".$SQL_DATABASE."</td> </tr>
+</table>
+");
+
+// Declare variables
+$allSqlTable;
+$allSqlContent;
+$allSqlDefine;
+
+// tables names
+$allSqlTable[0] = $sqlPho_MenuItem;
+$allSqlTable[1] = $sqlPho_MenuRating;
+$allSqlTable[2] = $sqlPho_MenuCate;
+$allSqlTable[3] = $sqlPho_MenuCateItem;
+$allSqlTable[4] = $sqlPho_UserAccount;
+$allSqlTable[5] = $sqlPho_Photo;
+
+// tables definition
+$allSqlContent[0] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`$allSqlTable[0]` (
+  `ID_MenuItem` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (ID_MenuItem),
+  `Txt_ItemTitle` VARCHAR(80) NOT NULL,
+  `Txt_ItemTitle%Fr` VARCHAR(100),
+  `Txt_ItemTitle%En` VARCHAR(80),
+  `Txt_ItemTitle%Tw` VARCHAR(80),
+  `Txt_ItemTitle%Vn` VARCHAR(80),
+  `Txt_PicName` VARCHAR(20),
+  `Dble_Price` DECIMAL(5,2) )";
+
+$allSqlContent[1] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`$allSqlTable[1]` (
+  `ID_MenuRating` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (ID_MenuRating),
+  `Txt_Name` VARCHAR(30),
+  `Txt_Email` VARCHAR(50),
+  `Txt_Comment` VARCHAR(250),
+  `Int_Rating` TINYINT(1) UNSIGNED,
+  `UpDT_Last&update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `Txt_Validated` VARCHAR(3))";
+
+$allSqlContent[2] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`$allSqlTable[2]` (
+  `ID_MenuCate` TINYINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (ID_MenuCate),
+  `Txt_CateTitle` VARCHAR(50) NOT NULL,
+  `Txt_CateTitle%Fr` VARCHAR(50),
+  `Txt_CateTitle%En` VARCHAR(50),
+  `Txt_CateTitle%Tw` VARCHAR(50),
+  `Txt_CateTitle%Vn` VARCHAR(50),
+  `Txt_PicName` VARCHAR(20),
+  `Txt_AvailableRating` VARCHAR(3))";
+  
+$allSqlContent[3] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`$allSqlTable[3]` (
+  `ID_MenuCateItem` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (ID_MenuCateItem),
+  `Id_MenuCate` TINYINT UNSIGNED,
+  `Id_MenuItem` SMALLINT UNSIGNED,
+  UNIQUE (Id_MenuCate, Id_MenuItem))";
+  
+
+$allSqlContent[4] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`".$allSqlTable[4]."` (
+  `ID_User` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY(ID_User),
+  `Login` VARCHAR(16) UNIQUE NOT NULL,
+  `Pwd_Password` VARCHAR(128) NOT NULL,
+  `First%Name` VARCHAR(25),
+  `Last%Name` VARCHAR(25),
+  `Email` VARCHAR (100) NOT NULL,
+  `UpDT_Last&update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP )";
+
+$allSqlContent[5] = "CREATE TABLE IF NOT EXISTS `$SQL_DATABASE`.`".$allSqlTable[5]."` (
+  `ID_Photo` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY(ID_Photo),
+  `Txt_FileName` VARCHAR(20),
+  `Txt_PhotoName` VARCHAR(40),
+  `Txt_Orientation` VARCHAR(15),
+  `Int_Width` SMALLINT UNSIGNED,
+  `Int_Height` SMALLINT UNSIGNED,
+  `Txt_Desc%Fr` VARCHAR(150),
+  `Txt_Desc%En` VARCHAR(150),
+  `Txt_Desc%Tw` VARCHAR(150),
+  `Txt_Desc%Vn` VARCHAR(150))";
+
+// tables pre-imported data
+$allSqlDefine[0][] = "";
+
+$allSqlDefine[1][] = "";
+
+$allSqlDefine[2][] = "";
+// $allSqlDefine[2][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[2]`  VALUES( NULL, 'Entr&eaucte;es', 'Entr&eacute;es', 'Starters' , '頭戴才', '', 'No') "; 
+// $allSqlDefine[2][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[2]`  VALUES( NULL, 'Pho', '', '' , '', '', 'No') "; 
+// $allSqlDefine[2][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[2]`  VALUES( NULL, 'Cháo', '', '' , '',, '' 'No') "; 
+// $allSqlDefine[2][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[2]`  VALUES( NULL, 'Bún', '', '' , '', '', 'No') "; 
+// $allSqlDefine[2][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[2]`  VALUES( NULL, 'Cơm Dĩa', '', '' , '', '', 'No') "; 
+
+$allSqlDefine[3][] = "";
+
+$allSqlDefine[4][] = "INSERT INTO `$SQL_DATABASE`.`$allSqlTable[4]`  VALUES( NULL, 'Lainlun', '1d998290889846a2c193ddc2c33ad55b7673f852', 'Alain' , 'Seng', 'xsylum@gmail.com', NULL) "; 
+
+$allSqlDefine[5][] = "";
+
+
+
+
+
+// ==============================================================================================================
+// ==============================================================================================================
+// ==============================================================================================================
+// ==============================================================================================================
+// ==============================================================================================================
+// ==============================================================================================================
+// ==============================================================================================================
+
+
+
+
+
+  // ========================= RENAME ===================== //
+if (isset($_POST['renameTable'])){
+  $sqlTable = $_POST['sqltable'];
+  sql_query("DROP TABLE IF EXISTS `".$sqlTable."_old`");
+  sql_query("RENAME TABLE  `$SQL_DATABASE`.`$sqlTable` TO  `$SQL_DATABASE`.`".$sqlTable."_old`");
+}
+
+
+
+  // ================== CREATE ============================== //
+ if (isset($_POST['createTable'])) {
+  
+  $tableCreatedkey  = $_POST['sqltable'];
+  // create the so-called table
+  sql_query($allSqlContent[$tableCreatedkey]);
+  // and maybe need to add some extra sql command
+  foreach($allSqlDefine[$tableCreatedkey] as $query) {
+  if ($query != "")   {  sql_query($query);  }
+  }
+  
+}
+    
+    
+  // ======================================  DISPLAY ALL THE TABLE NAMES AND STATUS ================================== //
+
+  // -----------  HEADERS
+  echo("  <div style='z-index:2;'>\n  <table border = '1' style='margin:auto; background:black; color:white;'>
+    <tr>
+      <th style='min-width:120px;'> Table name </th>
+      <th style='min-width:120px;'> Create Table </th>
+      <th style='min-width:120px;'> Rename Table in Old </th>
+      <th style='min-width:120px;'> Status </th>
+    </tr>");
+
+
+  // ----------  CHECK FOR ALL TABLES
+  foreach($allSqlTable as $key=>$sqlTable){
+   
+    // ------------ THIS TABLE EXISTS?
+    $existTable = sql_query("
+    SELECT COUNT(table_name) FROM information_schema.tables 
+    WHERE `table_schema` = '$SQL_DATABASE' AND `table_name` = '$sqlTable'");
+    $existTable = mysql_fetch_assoc($existTable);
+    $exist = $existTable['COUNT(table_name)'];
+
+    if ($exist == 1){
+    $status = "<span style = 'color:#33FF66;'>Table exists. Columns are : <ul>";
+    
+    $allColumnRaw = sql_query("SHOW COLUMNS FROM `$SQL_DATABASE`.`$sqlTable`");
+    while ($column = mysql_fetch_assoc($allColumnRaw)) {
+      $status .= "<li>".$column['Field']."</li>"; 
+    }
+    
+    $status .= "</ul></span>";
+    }
+    else if ($exist == 0){
+    $status = "<span style = 'color:red;'>table does not exist</span>";
+    }
+    else{
+    $status = "<span style = 'color:red;'>Problem: exist = $exist </span>";
+    }
+
+    // ------------ DISPLAY RESULTS
+    echo("    <tr>
+      <td> ".$sqlTable." </td>
+      <td> 
+      <form method = 'post' action = '".$_SERVER['PHP_SELF']."'> 
+        <input type = 'hidden' name = 'sqltable' value = '".$key."' />
+        <input type = 'submit' name = 'createTable' value = 'Create MySQL Table' />
+      </form>
+      </td>
+      <td> 
+      <form method = 'post' action = '".$_SERVER['PHP_SELF']."'> 
+        <input type = 'hidden' name = 'sqltable' value = '".$sqlTable."' />
+        <input type = 'submit' name = 'renameTable' value = 'Rename in Table_old' />
+      </form>
+      </td>
+      <td> ".$status." </td>
+    </tr>");
+  }
+
+  // --------------- END
+  echo("  </table>\n  </div>");  
+  
+
+include('../Tools/phobida_footer.php');
+?>

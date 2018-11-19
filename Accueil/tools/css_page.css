@@ -1,0 +1,170 @@
+
+
+/* =================================  ALL  ========================================= */
+h2{
+  border-bottom : 2px ridge white;
+}
+
+
+
+
+/* ===============================================  CONTACT ME  =========================================== */
+
+div#contactme{
+  /*background-image  : url('/Accueil/img/Accueil_div_back.png');
+  background-size   : 100%;
+  background-repeat : no-repeat;*/
+  padding           : 20px;
+  margin            : 30px 0px;
+}
+
+#contactme table{
+  margin            : auto;
+  border-collapse	:collapse;
+}
+
+#contactme tr{
+}
+
+#contactme td{
+  vertical-align    : top;
+  background-image  : url('/Accueil/img/Accueil_Form_Input.png');
+  background-size   : 100%;
+}
+#contactme td:first-child{
+  width             : 180px;
+  padding           : 4px 20px;
+}
+
+#contactme td:last-child:hover{
+  background-image  : url('/Accueil/img/Accueil_Form_Input_hover.png');
+}
+
+#contactme input{
+  background-image  : url('/Accueil/img/Accueil_Form_Input.png');
+  color             : #00B79E;
+  border            : none;
+}
+
+#contactme input:hover{
+  /*background-image  : url('/Accueil/img/Accueil_Form_Input_hover.png');*/
+  background-color  : red;
+}
+
+#contactme input.contactsubmit{
+  width             : 100px;
+  border            : 2px inset white;
+}
+
+#contactme textarea{
+  background-image  : url('/Accueil/img/Accueil_Form_Input.png');
+  color             : #00B79E;
+  border            : none;
+}
+
+#contactme textarea:hover{
+  /*background-image  : url('/Accueil/img/Accueil_Form_Input_hover.png');*/
+  background-color  : red;
+}
+
+/* ================================================  UPDATE =============================================== */
+div#update{
+  /*background-image  : url('/Accueil/img/Accueil_div_back.png');
+  background-size   : 100%;
+  background-repeat : no-repeat;*/
+  padding           : 20px;
+  margin            : 50px 0px;
+}
+/* --- update next/prev button --- */
+div.update_nextprev{
+  width				: 300px;
+  margin            : auto;
+}
+.update_nextprev td{
+  width             : 100px;
+  height            : 20px;
+  text-align        : center;
+  vertical-align    : middle;
+}
+.update_nextprev form{
+  height            : 20px;
+  vertical-align    : middle;
+}
+.update_nextprev input{
+  width             : 100px;
+}
+
+
+/* --- update item --- */
+.update div.item{
+/*background-image  : url('/Accueil/img/update_back.png');
+  background-size   : 100%;
+  background-repeat : no-repeat;*/
+  width             : 650px;
+  height            : 120px;
+  margin            : auto;
+  margin-bottom     : 50px;
+  color				: #180136;
+}
+.update div.item table{
+}
+.update div.item a{
+  color				: #180136;
+}
+.update div.item a:visited{
+  color				: #180136;
+}
+.update div.item img.background{
+  height        	: 140px;
+  width         	: 670px;
+  border 			: none;
+  position 			: absolute;
+  margin-top		: -10px;
+  margin-left		: -10px;
+  z-index			: -1;
+}
+.update div.item img.icon{
+  margin-left		: -10px;
+  height        	: 85px;
+  width         	: 85px;
+  border 			: none;
+}
+
+.update div.item div.row:first-child{  /* first line */
+  height			: 20px;
+  /*background		: #180136;*/
+}
+.update div.item div.row:last-child{  /* second/last line */
+  height			: 85px;
+}
+
+.update div.item div.row div:first-child{  /* first column */
+  width				: 15%;
+  float				: left;
+  text-align		: center;
+  /*background		: #180136;*/
+}
+.update div.item div.row div:last-child{  /* second/last column*/
+  text-indent		: 10px;
+  margin-left		: 15%;
+}
+
+.update div.item div.site{
+}
+.update div.item div.site_url{
+}
+.update div.item div.site_icon{
+}
+.update div.item div.site_update{
+  margin-left		: 15%;
+  height			: 50%;
+  padding			: 20px;
+  color				: cyan;
+}
+
+.update div.item div.update_date{
+  margin-top        : 00px;
+  height            : 15px;
+  /*background		: #0C198F;*/
+  font-size			: small;
+}

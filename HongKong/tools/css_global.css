@@ -1,0 +1,76 @@
+/*====================================== GLOBAL CSS =============================== */
+body{
+	background-attachment 	: fixed;
+	background-position	  	: center center;
+	background-color  : black;
+	color				  	: white;
+}
+
+div.page{
+	width					 : 75%;
+	margin					 : auto;
+	border-style			: ridge;
+	border-width			: 4px;
+	border-color			: #2e014f;
+	background        : rgba(0, 0, 0, 0.7);
+}
+	
+/*====================================== LEFT SIDE CSS =============================== */	
+div.left{
+	width					: 12%;
+	float					: left;
+}
+
+div#homepage{	
+	opacity				: 0.8;
+}
+#homepage img{
+	width				: 90%;
+}
+
+/*====================================== RIGHT SIDE CSS =============================== */
+div.right{
+	float				: right;
+	width				: 12%;
+	color				: #00eaff;
+}
+
+
+div.language{
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: white;
+	text-align			: center;
+}
+	
+
+div.loginform{
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: white;
+}
+.loginform input{
+	background-color	: navy;
+	color				: cyan;
+	border-style		: ridge;
+	border-width		: 2px;
+	border-color		: blue;
+}
+	
+
+a{
+  color           : cyan;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

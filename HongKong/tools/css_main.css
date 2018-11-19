@@ -1,0 +1,68 @@
+/* ============================== MAIN BODY/PAGE =============================== */
+
+div.page_left{
+  float        : left;
+  width        : 180px;
+}
+
+div.page_center{
+  margin-left  : 200px;
+}
+
+
+/* ============================== SUMMARY MAIN AND LEFT ======================== */
+ul.summary_main{
+  height         : 30px;
+  margin         : 1% 5%;
+  margin-bottom  : 20px;
+  list-style-type: none;
+}
+ul.summary_main li{
+  float          : left;
+  width          : 150px;
+  margin         : 0 5px;
+  background     : rgba(50, 0, 70, 0.7);
+  text-align     : center;
+}
+ul.summary_main li:hover{
+  background     : rgba(250, 220, 15, 0.9);
+  color          : #810935;
+}
+ul.summary_main a{
+    color           : white;
+    text-decoration : none;
+}
+
+
+p.summary{
+  background     : rgba(110, 20, 100, 0.4); 
+  width          : 120px; 
+  padding        : 3px;
+  margin         : auto;
+}
+ul.summary_leftside{
+  list-style-type : none;
+  margin-left    : -3%;
+}
+ul.summary_leftside li{
+  width          : 100px;
+  margin         : 0 5px;
+  padding        : 5px;
+  background     : rgba(50, 0, 70, 0.7);
+  text-align     : left;
+}
+ul.summary_leftside li:hover{
+  background     : rgba(205, 255, 185, 0.7);
+  color          : black;
+}
+ul.summary_leftside a{
+    color           : white;
+    text-decoration : none;
+}
+
+/* ============================== FOOTER DETAILS =============================== */
+div.footer{
+    width             : 75%;
+    margin            : auto;
+    text-align        : center;
+}

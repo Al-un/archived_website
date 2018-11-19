@@ -1,0 +1,131 @@
+/* ================================================================== */
+/*                          CATEGORY PANEL                            */
+/* ================================================================== */
+div#AddrLeftPanel{
+  width           : 15%;
+  float           : left;
+}
+div.LeftPanel_AddrType{
+
+}
+
+div.LeftPanel_AddrCate{
+  margin-left     : 10px;
+}
+
+div.LeftPanel_AddrSubCate{
+  margin-left     : 15px;
+}
+
+/* ================================================================== */
+/*                          LOCATION ITEM                             */
+/* ================================================================== */
+div#AddrRightPanel{
+  width           : 15%;
+  float           : right;
+}
+div.RightPanel_AddrCountry{
+
+}
+
+div.RightPanel_AddrArea{
+  margin-left     : 10px;
+}
+
+div.RightPanel_AddrCity{
+  margin-left     : 15px;
+}
+
+
+/* ================================================================== */
+/*                          DISPLAY ITEM                              */
+/* ================================================================== */
+div#AddrItemPanel{
+  width           : 70%;
+  margin          : auto;
+}
+div.ItemPanel_AddrItem{
+  border          : 1px solid white;
+  background      : #111111;
+  margin          : 10px auto;
+  width           : 95%;
+  padding         : 2px;
+}
+.zeroCount{
+  color           : grey;
+}
+
+
+/* ================================================================== */
+/*                          ADMIN ITEM                                */
+/* ================================================================== */
+/* Dialog boxes*/
+div#CityForm{
+  display         : none;
+  background      : #01251B;
+  color           : white;
+}
+div#CateForm{
+  display         : none;
+  background      : #01251B;
+  color           : white;
+}
+
+/* */
+div.AdminItem{
+  float           : left;
+  width           : 48%;
+  margin          : auto;
+  margin-bottom   : 10px;
+  margin-left     : 1%;
+  border          : 1px solid white;
+}
+.AdminItem p{
+  margin          : auto;
+}
+.AdminItem p.AdminItemID{
+  width           : 10%;
+  float           : left;
+}
+.AdminItem p.AdminItemTitle{
+}
+
+/* */
+p.ItemRelHeader{
+  margin          : auto;
+}
+p.ItemRelHeader:hover{
+  color           : #D6F5FC;
+  background-color: #04483B;
+}
+div.ItemRel{
+ margin-left      : 2%;
+}
+.ItemRel form{
+  margin          : 0;
+  width           : 15%;
+  float           : left;
+}
+.ItemRel p{
+  margin          : 0;
+}
+.ItemRel form input{
+  font-size       : 0.5em;
+  background      : none;
+  color           : white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

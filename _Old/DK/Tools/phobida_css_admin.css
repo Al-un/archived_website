@@ -1,0 +1,77 @@
+
+/*
+  - color name are taken from website:  http://www.quackit.com/html/html_color_codes.cfm
+*/
+
+div#Phobida_Admin{
+  width           : 100%;
+  margin          : auto;
+}
+
+
+div#WelcomeBox{
+  float           : left;
+  width           : 15%;
+  background      : black;
+  color           : white;
+}
+
+
+
+div#Phobida_Summary{
+  margin-left     : 15%;
+  background      : black;
+  color           : white;
+}
+
+#Phobida_Summary td.menu{
+  width           : 200px;
+  text-align      : center;
+}
+#Phobida_Summary td.menu:hover{
+  background      : black;
+  color           : cyan;
+}
+#Phobida_Summary table.submenu{
+  width           : 200px;
+  position        : absolute;
+  display         : none;
+  text-align      : left;
+  text-indent     : 1%;
+  background      : black;
+  color           : white;
+}
+#Phobida_Summary a{
+  color           : white;
+}
+#Phobida_Summary a:hover{
+  color           : cyan;
+}
+
+div#Phobida_AdminContent{
+
+}
+
+
+
+
+
+
+
+
+
+
+div.Pho_Cate{
+  width         : 80%;
+  margin        : auto;
+  margin-bottom : 20px;
+  background    : yellow;
+}
+div.Pho_CateItem{
+  display       : block;
+}
+div.Pho_Item{
+  margin-left   : 10%;
+  margin-bottom : 5px;
+  background    : orange;
+}

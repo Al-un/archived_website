@@ -1,0 +1,44 @@
+
+/*
+  - color name are taken from website:  http://www.quackit.com/html/html_color_codes.cfm
+*/
+
+div#PhotoArea{
+  margin        : auto;
+  width         : 90%;
+}
+
+
+/* ===================================================================== */
+/* >>>>>>>>>>>>>>             Photo
+/* ===================================================================== */
+
+/*div.PhoPhoto{*/
+a.PhoPhoto{
+  display       : block;
+  float         : left;
+  width         : 32%;
+  height        : 32%;
+  margin        : auto;
+  border        : 5px solid black;
+  text-align    : center;
+  overflow      : hidden;
+}
+
+a.PhoPhoto img{
+  /*opacity       : 0.7;      --> done by javascript */
+}
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

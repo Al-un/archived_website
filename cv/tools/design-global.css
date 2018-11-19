@@ -1,0 +1,71 @@
+/*====================================== GLOBAL CSS =============================== */
+body{
+  background	: #01071E;
+  color			: white;
+}
+
+div.page{
+  width			: 70%;
+  margin		: auto;
+  border-style	: ridge;
+  border-width	: 2px;
+  border-color	: #FFEE00;
+  background-color: #00011E;
+  
+  font-size		: 0.8em;
+}	
+	
+	
+/*====================================== LEFT SIDE CSS =============================== */	
+div.left{
+  width			: 12%;
+  float			: left;
+}
+
+#homepage img{
+  width			: 90%;
+}
+
+/* ==================================================================================== */
+/*								 RIGHT SIDE 												
+/* ==================================================================================== */
+div.right{
+  float			: right;
+  width			: 12%;
+  font-size		: 0.8em;
+}
+
+/* ============================ LANGUAGE =========================== */
+div.language{
+  border-style	: ridge;
+  border-width	: 1px;
+  border-color	: #9A6700;
+  text-align	: center;
+  height		: 23px;
+  margin-top	: 3%;
+  padding-top	: 3px;
+}
+div.language img{
+  height		: 20px;
+}
+	
+/* ============================ LOGIN FORM  ======================== */
+div.loginform{
+  visibility		: hidden;
+}
+	
+/*====================================== FOOTER =============================== */	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,423 @@
+/* ==================================================================================== */
+/*                 GLOBAL CSS                        
+/* ==================================================================================== */
+body{
+  color               : white;
+  background-color    : black;
+}
+
+a{
+  color               : #00eaff;
+}
+
+.changeColorRed{
+  background: darkred;
+}
+.changeColorGreen{
+  background: darkgreen;
+}
+
+/* ==================================================================================== */
+/*                 BLOCK layout                        
+/* ==================================================================================== */
+div.block{
+  position            : fixed;
+  background          : #0E191B;/*
+  border              : 1px solid red;*/
+  overflow            : hidden;
+}
+
+div#Xsy_Glob_Left{
+
+}
+div#Xsy_Glob_Right{
+
+}
+div#Xsy_Glob_Page{
+
+}
+div#CentralPanel{
+
+}
+div#Xsy_Glob_Page{
+
+}
+div#Art_Header{
+
+}
+div#Art_Footer{
+
+}
+
+div.scroller-track{
+
+}
+
+div.scroller-handle{
+
+}
+.scroller-active .scroller-content{
+  padding           : 0px;
+}
+/* ==================================================================================== */
+/*                 LEFT SIDE                         
+/* ==================================================================================== */
+
+
+div#homepage{  
+  display           : none;
+}
+
+div#SiteAdmin{
+  display           : none;
+}
+
+
+/* ==================================================================================== */
+/*                 RIGHT SIDE                         
+/* ==================================================================================== */
+
+
+/* ============================ LANGUAGE =========================== */
+/*
+div.language{
+}
+*/
+p.Xsy_Admin_CheckLanguage{
+  display           : none;
+}
+/* ============================ LOGIN FORM  ======================== */
+div.loginform{
+  width             : 90%;
+  margin            : auto;
+  font-size         : 0.8em;
+}
+div.loginform form{
+  width             : 85%;
+  padding           : 1%;
+  margin            : auto;
+}
+div.loginform p{
+  margin            : auto;
+  width             : 40%;
+  float             : left;
+}
+div.loginform input.input{
+  width             : 55%;
+  margin            : auto;
+  display           : block;
+  color             : cyan;
+  background-color  : navy;
+  border-style      : ridge;
+  border-width      : 2px;
+  border-color      : blue;
+  font-size         : 0.8em;
+}
+
+div.loginform input.submit{
+  width             : 100%;
+  margin            : auto;
+  display           : block;
+  background        : #010F28;
+  border            : 2px ridge #6297F2;
+  color             : #00eaff;
+  font-size         : 0.9em;
+}
+
+div.loginform a{
+  width            : 90%;
+  display          : block;
+  margin           : auto;
+  margin-bottom    : 5px;
+  margin-top       : 5px;
+  background       : #010F28;
+  border           : 2px ridge #6297F2;
+  color            : #00eaff;
+  text-decoration  : none;
+  text-align       : center;
+}
+div.logged{
+  margin           : auto;
+  margin-top       : 14px;
+  margin-bottom    : 14px;
+  text-align       : center;
+}
+div.logged p{
+  margin            : 0;
+  width             : 100%;
+  float             : none;
+}
+
+
+
+/* ==================================================================================== */
+/*                 FOOTER
+/* ==================================================================================== */
+div#Art_Footer{
+  /*display           : none;            TO FINISH !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+}
+
+#Art_Footer p.header{
+  margin            : auto;
+  text-align        : center;
+  font-variant      : small-caps;
+  border-bottom     : 1px solid #05F3F3;
+  margin-bottom     : 10px;
+}
+
+#Art_Footer .FootBlock{
+  background        : #052C33; /* a little bit lighter color that other block */
+  opacity           : 0.1;
+  position          : fixed;
+  z-index           : 999;
+  border            : 1px solid #05B3B3;
+  padding           : 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================================================================================== */
+/*                 Normal Display
+/* ==================================================================================== */
+
+/* ==================================================================================== */
+/*                 Admin
+/* ==================================================================================== */
+div.ArtAdminSummary{
+  height            : 7%;
+}
+ul.ArtAdminSummary{
+  list-style-type   : none;
+}
+.ArtAdminSummary li{
+  width             : 13%;
+  display           : block;
+  float             : left;
+  border-bottom     : 1px solid #00FFFF; /* 00FFFF equivalent of cyan */
+  margin            : auto 5px;
+  text-align        : center;
+}
+.ArtAdminSummary a:hover{
+  background        : #AA0000; /* kind of red */
+}
+.ArtAdminSummary a{
+  display           : block;
+  text-decoration   : none;
+}
+
+.ArtAdministration{
+  height            : 90%;
+}
+
+/* =============== common to all containers =========================================== */
+p.ContainerTitle{
+  border            : 1px solid #00FFFF;
+  width             : 80%;
+  margin            : auto; 
+  text-align        : center;
+  height            : 20px;
+  font-size         : 18px;
+  margin-top        : -10px !important;
+  background        : black;
+}
+div.ArtContainer{
+  border            : 1px solid #00FFFF;
+
+  margin            : 0;
+  margin-top        : 10px;
+}
+/* =============== Art List =========================================================== */
+div#ArtList{
+
+}
+div.ArtList_Row{
+  width             : 96%;
+  margin            : 2% auto;
+  height            : 150px;
+}
+.ArtList_Row div.ArtList_Container{
+  width             : 23%;
+  height            : 100%;
+  margin            : auto 1%;
+  display           : block;
+  float             : left;
+  overflow          : hidden;
+}
+.ArtList_Row img{
+
+}
+.ArtList_Row div.ArtList_Container:hover{
+  cursor            : pointer;
+}
+p.ArtList_Year{
+  width             : 95%;
+  margin            : auto;
+  text-align        : center;
+  border-bottom     : 1px solid cyan;
+}
+
+/* =============== Art Properties ===================================================== */
+div.ArtPropArea{
+  display           : none;
+}
+.ArtPropArea div{
+  margin            : 4%;
+}
+#ArtProp p{
+  margin            : auto;
+  text-indent       : 10px;
+}
+#ArtProp p.ArtPropTitle{
+  text-indent       : 0px;
+  text-align        : left;
+  color             : grey;
+}
+/* =============== Art Comments ======================================================= */
+
+div.ArtCommArea{
+  display           : none;
+}
+
+/* =============== Art Tags =========================================================== */
+div.ArtTagArea{
+  display           : none;
+}
+/* =============== Art Social Media =================================================== */
+div.ArtSocMedia{
+  display           : none;
+  text-align        : center;
+  padding-top       : 4px;
+  padding-bottom    : 4px;
+}
+
+/* =============== Art Description ==================================================== */
+div#ArtDesc{
+  float             : right;
+  width             : 50%;
+  height            : 50%;
+}
+div.ArtDescArea{
+  display           : none;
+  width             : 92%;
+  margin            : auto;
+  height            : 100%;
+}
+
+/* =============== Art Gallery ======================================================== */
+div#ArtArea{
+  float             : left;
+  width             : 49%;
+}
+div.ArtArea{
+  display           : none;
+  height            : 100%;
+  width             : 60%;
+}
+img.ArtArea_Image:hover{
+  cursor            : pointer;
+}
+img.ArtArea_Hidden{
+  display           : none;
+}
+
+/* ==================================================================================== */
+/*                 when poping up art
+/* ==================================================================================== */
+div#GallerySlideShow{
+  background        : rgba(0, 0, 0, 0.7);
+  position          : fixed;
+  width             : 100%;
+  height            : 100%;
+  z-index           : 10;/*
+  display           : none;*/
+}
+
+#GalleryLeftPanel{
+  width             : 8%;
+  height            : 99%;
+  float             : left;
+  border            : 1px solid cyan;
+}
+#GallerySummary{
+  width             : 100%;
+  height            : 92%;
+}
+div.ArtSummary_Item{
+  width             : 94%;
+  margin            : 15px 3%;
+  overflow          : hidden;
+}
+div.ArtSummary_Item img{
+  opacity           : 0.9;
+  width             : 100%;
+  height            : auto;
+}
+div.ArtSummary_Item img:hover{
+  cursor            : pointer;
+  opacity           : 1;
+}
+
+#GalleryClose{
+  background        : darkred;
+  width             : 100%;
+  text-align        : center;
+}
+#GalleryClose:hover{
+  cursor            : pointer;
+  background        : red;
+}
+
+
+#GalleryContent{
+  width             : 90%;
+  height            : 94%;
+  margin-left       : 9%;
+  border            : 1px solid cyan;
+}
+div.ArtContent_Item{
+  display           : none;
+  width             : 100%;
+  height            : 100%;
+}
+div.ArtContent_Item img{
+  width             : 100%;
+}
+
+#GalleryComment{
+  width             : 90%;
+  margin-top        : 4px;
+  margin-left       : 9%;
+  height            : 4%;
+  border            : 1px solid cyan;
+}
+
+div.ArtComment_item{
+  display           : none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

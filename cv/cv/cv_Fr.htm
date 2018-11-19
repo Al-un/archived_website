@@ -1,0 +1,269 @@
+﻿<?php
+function moreButton($idButton){
+  echo("<img src='/CV/cv/img/detail_fr.gif' id='More$idButton' alt='Plus de d&eacute;tail' height='10px' title='En savoir plus'/>");
+}
+function moreDiv($idDetail){
+  echo("    <div class='detail' id='Detail$idDetail'>\n    <p class='detailLogo'>D&eacute;tails</p>\n");
+}
+?>
+<p style='width:80%; margin:auto;'>N'h&eacute;sitez pas &agrave; cliquer sur le bouton "en savoir plus" pour afficher des d&eacute;tails. <br />
+Pour une version (all&eacute;g&eacute;e) en PDF, c'est par <a href='files/Seng_Alain_CV_Fr.pdf' style='color:white;'> ici </a>.</p>
+
+<!-- ============================  PERSONAL DATA  ========================== -->
+<div class = 'someData' id='PersonalData'>
+ <p class='title' id='titlePersonalData'>Etat civil</p>
+ <p> SENG Alain 
+ <br /> 24 ans en 2012 (n&eacute; le 12 ao&ucirc;t 1988)
+ <br />
+ <br /> <img src='img/icon_phone.png' height='15' width='15' alt='Téléphone' /> <span style='margin-left:2px' >  +33 (0)6 25 27 65 11 </span>
+ <br /> <img src='img/icon_email.png' height='15' width='15' alt='Email' /> <span style='margin-left:2px' > <a href='mailto:Alain.Seng@mines-nancy.org'>Alain.Seng@mines-nancy.org </a></span>
+ <br />
+ <br /> <img src='img/icon_address.png' height='15' width='15' alt='Adresse' />  <span style='margin-left:2px' > 3 rue Lucien Piron </span>
+ <br /> <span style='margin-left:20px' > 93110 Rosny-sous-Bois </span>
+ <br /> <span style='margin-left:20px' > FRANCE </span>
+ <br />
+ <br /> <img src='img/icon_website.png' height='15' width='15' alt='Site Web' />  <span style='margin-left:2px' > <a href = "http://xsylum.free-h.net">http://xsylum.free-h.net</a> </span>
+ <br /> <img src='img/icon_deviantart.png' height='15' width='15' alt='DeviantArt' /> <span style='margin-left:2px' > <a href='http://xsylum.deviantart.com/'>  http://xsylum.deviantart.com/ </a> </span>
+ </p>
+</div>
+
+<!-- ===============================  SCHOOL  ============================== -->
+<div class = 'someData' id='SchoolData'>
+  <p class='title' id='titleSchoolData'>Cursus Scolaire</p>
+  
+  <p> <?php moreButton('MinesNancy'); ?> 2008-2012 - <a href='http://www.mines.inpl-nancy.fr/'> Ecole des Mines de Nancy </a> - D&eacute;partement Information &amp; Syst&eacute;mes </p>
+    <?php moreDiv('MinesNancy'); ?>
+    <table border = "0" >
+  
+    <tr>
+  <td>2011-2012</td>
+  <td> Ecole des Mines de Nancy, Troisi&egrave;me ann&eacute;e, d&eacute;partement Information et syst&egrave;me <br /></td>
+  </tr>
+  
+    <tr>
+  <td>2010-2011</td>
+  <td> Ann&eacute;e de c&eacute;sure chez <a href='http://fr.soldatagroup.com/'>SolData Asia Ltd</a> (groupe Vinci) &agrave; Hong Kong </td>
+  </tr>
+  <tr>
+  <td></td>
+  <td>cf. <a href='index.php#JobData'> la partie correspondante </a> </td>
+  </tr>
+  
+    <tr>
+  <td>2009-2010</td>
+  <td> Ecole des Mines de Nancy, Deuxi&egrave;me ann&eacute;e, d&eacute;partement Information et syst&egrave;me </td>
+  </tr>
+  <tr>
+  <td></td>
+  <td> Ann&eacute;e de sp&eacute;cialisation compl&eacute;t&eacute;e par des cours transversaux et manag&eacute;riaux
+    <ul>
+      <li> Informatique: R&eacute;seaux, Mod&eacute;lisation, Base de donn&eacute;es, Logique</li>
+    <li> Atelier <a href='http://artem.inpl-nancy.fr/'>ARTEM</a>: d&eacute;veloppement d'un projet artistique sous forme d'une application iPhone.</li>
+    <li> Introduction &agrave; la Micro&eacute;conomie et &agrave; l'analyse financi&egrave;re</li>
+    </ul></td>
+  </tr>
+  
+    <tr>
+    <td>2008-2009</td>
+    <td> Ecole des Mines de Nancy, Premi&egrave;re ann&eacute;e (FICM: Formation d'ing&eacute;nieur civil des Mines) </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td> Ann&eacute;e de Tronc commun. </td>
+  </tr>
+  
+    </table>
+  </div>
+  
+  <p> <?php moreButton('SaintLouis'); ?> 2006-2008 - CPGE <a href='http://lyc-saint-louis.scola.ac-paris.fr/'> Lyc&eacute;e Saint Louis </a> </p>
+    <?php moreDiv('SaintLouis'); ?>
+    <table border = "0">
+    <tr><td>2007-2008</td><td> Classe pr&eacute;paratoire aux Grandes Ecoles fili&egrave;re MP* option Informatique</td></tr>
+    <tr><td>2006-2007</td><td> Classe pr&eacute;paratoire aux Grandes Ecoles fili&egrave;re MPSI</td></tr>
+    </table>
+  </div>
+  
+  <p> <?php moreButton('SaintMichel'); ?> 2005-2008 - <a href='http://saintmicheldepicpus.fr/stmande/'> Lyc&eacute;e Saint Michel </a> </p>
+    <?php moreDiv('SaintMichel'); ?>
+    <table border = "0">
+    <tr><td>Juin 2006</td><td> Baccalaur&eacute;at Scientifique, Option SVT, Mention TB</td></tr>
+    </table>
+  </div>
+  
+</div>
+
+<!-- ================================  JOBS  =============================== -->
+<div class = 'someData' id='JobData'>
+  <p class='title' id='titleJobData'>Exp&eacute;rience Professionnelle</p>
+  
+  <p> <?php moreButton('SolData'); ?> Ann&eacute;e de c&eacute;sure &agrave; <a href='http://fr.soldatagroup.com/'>SolData Asia Ltd</a> 
+  <br /> Juillet 2010 - Juillet 2011 (12 mois), Hong Kong, CHINE </p>
+  <p> Ing&eacute;nieur hybride chantier et informaticien: de la gestion des projets de <i>monitoring</i> &agrave; la mise en place d'un syt&egrave;me VMware </p>
+  <?php moreDiv('SolData'); ?>
+    <p> SolData est une filiale du groupe Vinci via le groupe Soletanche-Bachy. Sp&eacute;cialis&eacute;e dans la surveillance des sols, SolData accompagne les chantiers de contruction pour en assurer la s&eacute;curit&eacute; par la pr&eacute;vention. Derri&egrave;re les solutions de <i>monitoring</i> propos&eacute;es se cachent des chaines logicielles d'o&ugrave; l'utilit&eacute; des comp&eacute;tences informatiques coupl&eacute;es &agrave; une compr&eacute;hension du coeur de m&eacute;tier de SolData. <br />
+  Trois missions principales m'ont &eacute;t&eacute; confi&eacute;es durant ces douze mois:</p>
+  
+  <ul>
+    <li> <p>Projet de virtualisation du SI de SolData Asia Ltd <br />
+    En r&eacute;sum&eacute;, l'objectif de ce projet &eacute;tait de modifier la structure IT existante. De quelques ordinateurs fixes faisant office de serveurs de calcul pour les projets de <i>monitoring</i>, il fallait arriver &agrave; une structure centralis&eacute;e autour d'un seul syst&egrave;me de virtualisation. <br />
+    J'ai donc commenc&eacute; par &eacute;tudier...les syst&egrave;mes de virtualisation puisque mes connaissances dans le domaine fr&ocirc;laient le n&eacute;ant absolu. Ensuite, le si&egrave;ge en France ayant d&eacute;j&agrave; d&eacute;ploy&eacute; un syst&egrave;me VMware, je pouvais avoir un outil de r&eacute;f&eacute;rence. Reste alors &agrave; analyser les besoins de SolData &agrave; Hong Kong.<br />
+    La suite concernait alors la phase de n&eacute;gociation des achats aussi bien du hardware que de la ligne Internet d&eacute;di&eacute;e et tous les composants annexes. La gestion du calendrier est alors crucial car il fallait synchroniser les agendas de plusieurs fournisseurs. <br />
+    Quand &agrave; la livraison, qui n'a pas &eacute;t&eacute; sans mal, elle s'est achev&eacute;e dans les temps ce qui me permettait d'embrayer sur l'&eacute;tape de l'installation du hardware, du c&acirc;blage &eacute;lectrique et r&eacute;seaux, de la configuration des firmwares (Switch, Disk Array) et enfin l'installation et la configuration des softwares (VMware vSphere Essential, Symantec Back Up Exec 2010 R2 entre autres). <br />
+    Bien que le syst&egrave;me soit enti&egrave;rement op&eacute;rationnel &agrave; ce stade, il me fallait alors le compl&eacute;ter avec des templates appropri&eacute;s mais aussi des documents de passation et faire en sorte qu'il y ait un minimum d'intervention externe requise apr&egrave;s mon d&eacute;part. <br />
+    A la fin du projet, un ing&eacute;nieur chantier n'a plus qu'&agrave; acc&eacute;der au vCenter, le centre de virtualisation, et cliquer sur "D&eacute;ployer" et tout le syst&egrave;me IT &eacute;tait mis en place alors qu'auparavent il fallait avant installer tous les logiciels, v&eacute;rifier la compatibilit&eacute; des versions et les configurer. </p></li>
+    <li> <p>Gestion de projet de monitoring. </p> </li>
+    <li> <p> D&eacute;veloppement d'une interface pour le datalogger <a href='http://fr.soldatagroup.com/soldata/soldata_fr.nsf/newsweb/News.Prix-de-l-innovation'> Micron II </a> sous le <a href='http://qt.nokia.com/products/'>framework Qt</a>. <br />
+    Un logiciel existant &eacute;tait cod&eacute; en Delphi. En septembre 2010, la decision de refondre les programmes en Qt a &eacute;t&eacute; vot&eacute;e. Ce projet de programmation n'a pas pu aboutir &agrave; son terme, ce qui &eacute;tait pr&eacute;vu et a dur&eacute; environ six mois. Vous pouvez trouver les documents de passation (diagramme de classe et diagramme de cas d'utilisation) dans mon rapport. </p> </li>
+  </ul>
+  
+  <p>Vous pouvez trouver sur ce site:</p>
+    <ul>
+      <li> <a href='files/SolData_Rapport.zip'><img src='img/icon_zip.gif' height='14' alt='Archive Zip' /> mon rapport </a> (au format .zip car contient le rapport et les annexes)</li>
+    <li> <a href='files/SolData_Soutenance.ppt'> <img src='img/icon_ppt.png' height='14' alt='Fichier ppt' /> la pr&eacute;sentation de ma soutenance. </a></li>
+  </ul>
+  </div>
+  
+  <p> <?php moreButton('Matmut'); ?> Emploi d'&eacute;t&eacute; chez <a href='http://www.matmut.fr/'> Matmut </a>
+  <br /> Juillet 2009 (5 semaines), Torcy, Ile de France, FRANCE </p>
+  <p> Employ&eacute; administratif au service secr&eacute;tariat </p>
+  <?php moreDiv('Matmut'); ?>
+    <p> En plus du tri du courrier entrant, la t&acirc;che principale qui m'ait &eacute;t&eacute; attribu&eacute;e consistait &agrave; retaper les rapports des inspecteurs sous un format pr&eacute;-d&eacute;fini. </p>
+  </div>
+  
+  <p> <?php moreButton('AdvancedCoating'); ?> Stage ouvrier &agrave; <a href='http://www.advanced-coating.com/societe.htm'>Advanced Coating</a> 
+  <br /> Janvier 2009 - Mars 2009 (6 semaines), Li&egrave;ge, BELGIQUE </p>
+  <p> Stage ouvrier: travail de finition dans la chaine de projection de cuivre sur des barres d'aluminium </p>
+  <?php moreDiv('AdvancedCoating'); ?>
+    <p> Advanced Coating est une PME dont la sp&eacute;cialit&eacute; est la projection de m&eacute;taux. La chaine o&ugrave; j'ai travaill&eacute; &eacute;tait consacr&eacute;e &agrave; recouvrir des barres d'aluminium d'une couche de cuivre conductrice car ces barres &eacute;taient destin&eacute;es aux armoires &eacute;lectriques. Mon travail &eacute;tait &agrave; la fin de la cha&icirc;ne: je nettoyais les barres des t&acirc;ches de projection, je mettais les barres dans les caisses et d&eacute;placais &eacute;ventuellement ces caisses &agrave; l'aide d'un pont m&eacute;canique et de transpalette.</p>
+  </div>
+  
+  <p> <?php moreButton('Amf'); ?> Emploi d'&eacute;t&eacute; chez <a href='http://www.amf-assurances.fr/'> AMF </a>
+  <br /> Juillet 2005 (4 semaines), Paris, FRANCE </p>
+  <p> Employ&eacute; administratif au service courrier </p>
+  <?php moreDiv('Amf'); ?>
+    <p> AMF (Assurance Mutuelle des Fonctionnaires) &eacute;tait une PME dont la principale mission consistait &agrave; assurer les fonctionnaires. Elle est aujourd'hui rachet&eacute;e par la Matmut. J'&eacute;tais alors int&eacute;gr&eacute; au service courrier durant cinq semaines. Le matin &eacute;tait consacr&eacute; au tri du courrier entrant, suivi par la distribution de certaines lettres dans les diff&eacute;rents services internes, tandis que mon apr&egrave;s midi voyait l'op&eacute;ration inverse &agrave; savoir l'envoi de courrier sortant constitu&eacute; principalement de publicit&eacute;s. </p>
+  </div>
+  
+</div>
+
+<!-- ================================   IT   =============================== -->
+<div class = 'someData' id='ItData'>
+  <p class='title' id='titleItData'>Comp&eacute;tences informatique</p>
+  <table border = "0">
+  <tr> <td> Programmation </td>   <td> Java, Qt (framework C++)</td></tr>
+  <tr> <td> Web </td>             <td> HTML4, xHTML1, PHP, CSS2, MySQL, Javascript (jQuery)</td></tr>
+  <tr> <td> Bureautique </td>     <td> Suite Microsoft Office (Word, Excel, PowerPoint)</td></tr>
+  <tr> <td> Logiciel </td>        <td> Contact avec <a href='http://www.vmware.com/fr/solutions/company-size/smb/index.html'>VMware vSphere Essential</a> </td> </tr>
+  </table>
+</div>
+
+<!-- ============================   LANGUAGES   ============================ -->
+<div class = 'someData' id='LangData'>
+  <p class='title' id='titleLangData'>Comp&eacute;tences Linguistiques</p>
+  <table border = "0">
+  <tr><td> Anglais         </td> <td><img src='/CV/cv/img/en.gif' width='30' title='Anglais' alt='Anglais' /></td>  <td> Comp&eacute;tences professionnelles</td>  </tr>
+  <tr><td> Chinois         </td> <td><img src='/CV/cv/img/cn.gif' width='30' title='Mandarin' alt='Mandarin' /></td> <td> niveau interm&eacute;diare (mandarin)</td> </tr>
+  <tr><td> Japonais        </td> <td><img src='/CV/cv/img/jp.gif' width='30' title='Japonais' alt='Japonais' /></td>  <td> D&eacute;butant</td> </tr>
+  <tr><td> Espagnol        </td> <td><img src='/CV/cv/img/es.gif' width='30' title='Espagnol' alt='Espagnol' /></td>   <td> Notions (LV2 du Secondaire)</td> </tr>
+  </table>
+</div>
+
+<!-- =========================   STUDENT ORG   ============================= -->
+<div class = 'someData' id='AssoData'>
+  <p class='title' id='titleAssoData'>Vie associative en Grande Ecole</p>
+  
+  <img src='img/logo_animest.png' style='float:left; width:60px; margin-top:40px;' alt="Anim'Est" title="Le Tanuki, la mascotte d'Anim'Est" />
+  <div style='margin-left:70px;margin-bottom:30px;'>
+    <p> <a href='http://www.animest.net/'>Anim'Est, la plus grande convention d&eacute;di&eacute;e a la culture Japonaise de l'Est </a></p>
+  <dl>
+    <!-- Anim'Est no Haru 2010 -->
+    <dt> Anim'Est no Haru 2010 </dt>
+      <dd> <?php moreButton('Animest2010'); ?> Ancien de l'association
+      <?php moreDiv('Animest2010'); ?>
+    <p>Etant &agrave; ce moment un ancien de l'association, officiellement &agrave; la "retraite", j'avais alors un certain recul vis-&agrave;-vis de l'organisation et de la structure d'Anim'Est. Poursuivant mon r&ocirc;le de formateur et en suivant d'un peu plus loin sans m'immiscer dans les d&eacute;cisions du conseil d'administration, je gardais contact avec la nouvelle &eacute;quipe afin de m'assurer que mon d&eacute;part r&eacute;ellement d&eacute;finitif laissera une organisation pr&ecirc;te &agrave; affronter l'avenir. Le mandat suivant (2010/2011) fut marqu&eacute; par le passage d'Anim'Est au statut d'association de loi 1901. <br />
+    Anim'Est no Haru (le printemps d'Anim'Est en japonais) &eacute;tait un &eacute;v&eacute;nement test qui s'est d&eacute;roul&eacute; au sein de l'Esial afin de mieux faire connaitre Anim'Est dans le Grand Nancy.</p>
+      </div>
+      </dd>
+    
+    <!-- Anim'Est 2009 vivent les sous! -->
+    <dt> Anim'Est 2009 </dt>
+      <dd> <?php moreButton('Animest2009'); ?> Tr&eacute;sorier, Communication interne et inter-&eacute;cole, Recrutement
+    <?php moreDiv('Animest2009'); ?>
+    <p> Durant l'ann&eacute;e 2008/2009, nous &eacute;tions en manque d'effectif. A l'instar des PME, j'ai donc cumul&eacute; plusieurs casquettes: Tr&eacute;sorier est mon titre officiel &agrave; Anim'Est. Aux Mines, j'etais charg&eacute; de la communication interne et du recrutement. A l'ESIAL, &agrave; l'aide du pr&eacute;sident d'Anim'Est du c&ocirc;te&eacute; des Mines, je tentais d'am&eacute;liorer la communication inter-&eacute;cole. Mon poste de recruteur m'a amen&eacute; &agrave; former la nouvelle &eacute;quipe d'Anim'Est ce qui a un peu prolong&eacute; ma pr&eacute;sence dans cette association.</p>
+      </div>
+      </dd>
+    
+    <!-- Anim'Est 2008, larbinage -->
+    <dt> Anim'Est 2008 </dt>
+      <dd> <?php moreButton('Animest2008'); ?> Membre du personnel de la convention
+    <?php moreDiv('Animest2008'); ?>
+    <p> Attir&eacute; par la culture japonaise, je me suis rapproch&eacute; de cette association d&egrave;s mon arriv&eacute;e &agrave; l'Ecole. Le syt&egrave;me de formation d'Anim'Est est corr&eacute;l&eacute; avec le cycle de formation des &eacute;l&egrave;ves des Mines de Nancy et de l'ESIAL, l'autre &eacute;cole organisatrice de cet &eacute;v&eacute;nement. La premi&egrave;re ann&eacute;e permet de d&eacute;couvrir les diff&eacute;rents p&ocirc;le de la convention. Le jour J, on fait partie des membres du staff: vente des billets (&agrave; l'heure du rush de l'ouverture), buvette, vestiaires...On fait ainsi le tour de tous les postes et cela nous permet d'entrevoir tout l'envers du d&eacute;cor d'un tel &eacute;v&eacute;nement.</p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+  <img src='img/logo_minesServices.jpg' style='float:left; width:100px;' title='Mines Services, la Junior Entreprise des Mines de Nancy' alt='Mines Services'/>
+  <div style='margin-left:110px;margin-bottom:30px;'>
+    <p> <a href='http://eleves.mines.inpl-nancy.fr/~junior/'> Mines Services, la Junior Entreprise de l'Ecole des Mines de Nancy </a> </p>
+  <dl>
+    <dt> Mines Services 2009/2010 </dt>
+      <dd> <?php moreButton('Je2009'); ?> P&ocirc;le communication &amp; &eacute;v&eacute;nementiel
+    <?php moreDiv('Je2009'); ?>
+    <p> Motiv&eacute; par une association plus professionnelle, je me suis tout naturellement tourn&eacute; vers la Junior Entreprise. Ayant un attrait pour la communication, j'ai choisi ce p&ocirc;le en cons&eacute;quence. A cheval entre la communication interne et la communication externe, je devais alterner les moyens de communications, le fond comme la forme. De plus, la Junior Entreprise organise certains &eacute;v&eacute;nements, l'organisation revient au p&ocirc;le communication. </p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+  <img src='img/logo_gala.jpg' style='float:left; width:100px;' alt='Nuit des Mines' title='La Nuit des Mines 2009!'/>
+  <div style='margin-left:110px;min-height:140px;'>
+    <p> <a href='http://eleves.mines.inpl-nancy.fr/~ndm/'> La Nuit des Mines, le Gala des Mines de Nancy </a> </p>
+  <dl>
+    <dt> Nuit des Mines 2010 </dt>
+      <dd> <?php moreButton('Gala2010'); ?> P&ocirc;le PAO (publication de l'affiche officielle de la nuit des Mines 2010)
+    <?php moreDiv('Gala2010'); ?>
+    <p> Suite &agrave; mes performances de photmontage dans le cadre de la communication pour la Junior Entreprise, j'ai &eacute;t&eacute; appel&eacute; par l'equipe du Gala afin de cr&eacute;er leur affiche. Il me fallait alors conna&icirc;re leurs attentes. J'ai v&eacute;cu cette exp&eacute;rience un peu comme une prestation de service PAO plut&ocirc;t qu'en tant que membre de l'&eacute;quipe Gala.</p>
+      </div>
+      </dd>
+  </dl>
+  </div>
+  
+</div>
+
+<!-- =============================   LEISURE   ============================= -->
+<div class = 'someData' id='LeisureData'>
+  <p class='title' id='titleLeisureData'>Loisirs</p>
+  
+  <div>
+  <ul>
+  <li> <?php moreButton('Dessin'); ?>   Dessin au crayon (format A4, A5)
+      <?php moreDiv('Dessin'); ?>
+      <p> Le Dessin...je pourrais en parler pendant des heures. "Dis moi comment tu dessines, je te dirai comme tu es". Sans trop extrapoler, il est vrai que le coup de crayon peut nous en apprendre beaucoup sur nous-m&ecirc;me. C'est pourquoi je m'efforce de trouver mon style. La passion et la patience sont des qualit&eacute;s que seul le Dessin a r&eacute;ussi &agrave; m'enseign&eacute;es. Et c'est aussi le meilleur exemple de pers&eacute;v&eacute;rance quand je revois mon tout premier dessin, celui d'un plateau MacDo...sans le burger! N'hesitez pas a faire un tour sur mon <a href='http://xsylum.deviantart.com/'>DeviantArt</a> (site de partage artistique), un petit dessin vaut mieux qu'un long discours dit-on...Mais ne vous attendez pas &agrave; du grand Art ! J'essaie aussi de varier mon dessin: format A5, A4 bient&ocirc;t A3, dessin sur tablette graphique, speed montage ou speed painting, voici mes ambitieux projets!</p>
+      </div>
+  </li>
+  <li> <?php moreButton('Ecriture'); ?> Ecriture
+    <?php moreDiv('Ecriture'); ?>
+      <p> Mon loisir de loin le plus personnel. J'ai ha&iuml; les cours de Fran&ccedil;ais au lyc&eacute;e. Je me retrouve maintenant &agrave; &eacute;tudier de nouveau figure de style et compagnie. J'ai un penchant pour la po&eacute;sie sous plusieurs de ses formes (en alexandrin ou en prose) mais aussi pour l'Ecriture automatique. Je poss&egrave;de aussi une plume de verre. Ecrire &agrave; l'ancienne (plonger la plume dans l'encrier) est aussi un autre plaisir: l'Ecriture, c'est l'art d'Ecrire et l'Art d'&eacute;crire.</p>
+      </div>
+  </li>
+  <li> <?php moreButton('Billard'); ?>  Billard
+    <?php moreDiv('Billard'); ?>
+      <p>  Malgr&eacute; mon niveau plus que moyen, le billard est un loisir que j'adore par go&ucirc;t de challenge. En d&eacute;pit de mon fort taux d'&eacute;chec, j'aime bien essayer des actions originales (bandes, effet r&eacute;tro, saut de blanche...). Aussi bien fan du <i>8-pool</i> et du <i>9-pool</i>, mes int&eacute;r&ecirc;ts se portent plut&ocirc;t vers le billard am&eacute;ricain bien que le billard Fran&ccedil;ais pr&eacute;sente son quota de challenge et d'amusement bien s&ucirc;r. Je n'ai jamais essay&eacute; le snooker.</p>
+      </div>
+  </li>
+  <!--
+  <li> <?php moreButton('Break'); ?>    Breakdance
+    <?php moreDiv('Break'); ?>
+      <p> Sport indubitablement complet, le breakdance se divise en trois sous-cat&eacute;gories: le debout (danse debout), les <i>freezes</i> (figures fig&eacute;es) et les phases (figures acrobatiques). Bien que mon souhait se dirige vers cette derni&egrave;re, ma condition physique ne me permet que la premi&egrave;re cat&eacute;gorie, et encore. Il me faut alors beaucoup d'entra&icirc;nement, t&acirc;che &agrave; laquelle je manque cruellement d'assiduit&eacute; parfois par manque de temps ou par manque de volont&eacute;. </p>
+      </div>
+  </li>
+  -->
+  <li> <?php moreButton('Cuisine'); ?>  Cuisine
+    <?php moreDiv('Cuisine'); ?>
+      <p> Quand l'app&eacute;tit va, tout va. Bref, bien manger aide &agrave; bien vivre. D'un point de vue culturel, j'ai grandi en France au sein d'un famille de tradition chinoise dont les parents sont n&eacute;s en Indochine. Au niveau de l'assiette, cela se remarque rapidement. Les plats rassemble alors les saveurs vietnamiennes &agrave; la magie de la cuisine chinoise. Les plats plus typ&eacute;s Fran&ccedil;ais permettent alors de diversifier les plaisirs du palais. Tout cette gastronomie cosmopolite permet alors la naissance de mariages int&eacute;ressants de saveurs et d'ingr&eacute;dients. A mes heures perdues, je m'essaie alors de conserver un savoir-faire tout en l'enrichissant de certaines innovations...le tout &agrave; la hauteur de mes comp&eacute;tences bien entendu.</p>
+      </div>
+  </li>
+  </ul>
+  </div>
+</div>

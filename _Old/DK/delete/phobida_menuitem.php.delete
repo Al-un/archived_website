@@ -1,0 +1,6 @@
+﻿<?php
+$adminRequired = TRUE;
+include('../Tools/phobida_header.php');
+ManageTable($sqlPho_MenuItem);
+include('../Tools/phobida_footer.php');
+?>

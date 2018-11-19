@@ -1,0 +1,127 @@
+/************ the main body ******************/
+
+
+div.sidebar{
+	float				: left;
+	width				: 15%;
+}
+
+div.main{
+ 	width				: 75%;
+	margin-left			: 20%;
+	padding				: 0px 20px;
+	padding-bottom		: 30px;
+	border				: white 2px solid;
+}
+
+
+div.content{
+	padding				: 20px;
+	border				: 4px inset white;
+	margin-left			: 140px;
+}
+
+/************ the menu in the header *********/
+	
+	/* main menu */
+	div.menu{
+	 	margin				: 1px 1px;
+	 	
+	}
+	.menu ul{
+		list-style-type		: none;
+		text-align			: center;
+	}
+	.menu li{
+		float				: left;
+		width				: 100px;
+		background-color	: #0020a0;
+		color				: #00a0a0;
+		border-width		: 2px;
+		border-style		: outset;
+		border-color		: #602040;
+	}
+
+	/* submenu under the main menu */
+
+	/* menu on the left */
+	div.menuleft{
+		float				: left;
+		margin-left			: -25px;
+		margin-top			: 60px;
+	}
+	.menuleft ul{
+		list-style-type		: none;
+		text-align			: center;
+	}
+	.menuleft li{
+		width				: 160px;
+		background-color	: blue;
+		color				: pink;
+		border				: 2px solid yellow;
+	}
+
+
+/************* the very home page **************/
+.home p{
+	text-indent			: 20px;
+}
+.home dl{
+	padding				: 30px;
+	padding-left		: 60px;
+	padding-right		: 60px;
+	border				: 2px solid yellow;
+}
+.home dt{
+}
+.home a{
+	color				: #26B7EB;
+}
+.home a:visited{
+	color				: #26B7EB;
+}
+
+/******************* HTML PAGE ********************/
+/*************************************************/
+
+	/** pour la page liste **/
+	pre.code{
+	 	margin				: auto;
+	 	margin-bottom		: 10px;
+	 	width				: 700px;
+		background-color	: #003333;
+		padding				: 10px;
+	}
+	.render {
+	 	margin				: auto;
+	 	width				: 560px;
+		background-color	: #003366;
+		padding				: 10px;
+		padding-left		: 150px;
+	}
+	
+	span.reserved{
+		color				: orange;
+	}
+	span.identifer{
+	 	color				: yellow;
+	}
+	span.variable{
+	 	color				: DeepSkyBlue; 
+		font-weight			: 700;
+	}
+
+
+/******************* CSS PAGE ********************/
+/*************************************************/
+
+.border p{
+ 	margin				: auto;
+ 	margin-bottom		: 5px;
+ 	padding				: 2px;
+	text-indent			: 15px;
+	width				: 400px;
+	border-width		: 4px;
+	border-color		: #339900;
+}
+

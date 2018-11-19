@@ -1,0 +1,148 @@
+/*Fichier CSS pour accueil.html à priori*/
+
+/*********************************************************/
+/************** style pour la page en entière ************/
+body
+{
+	width				: 95%;
+	/* margin : marge extérieure et auto : centre la page */
+	margin				: auto;
+	margin-top			: 10px;
+	/*margin-left		: 40px; --> no need car centre auto le body
+	margin-right		: 20px;
+	/*insert image pour fond qu'on répète honrizontalement*/			
+	background-image 	: url("img/fond3.jpg");
+	background-repeat	: repeat-y;
+	border				: 4px solid navy;
+	
+	font-family			: president, Arial, serif;
+	font-size 			: 20px;
+}
+
+/*********************************************************/
+/*************** Les Blocks ******************************/
+
+/*header*/
+.header
+{
+	width			: 100%;
+	height			: 214px;
+	margin-top		: 0px;
+	margin-left		: 0px;
+	margin-right	: 0px;
+	margin-bottom 	: 10px;
+	border-style	: hidden;
+		
+}
+
+/*menu*/
+.menu
+{
+	float 	: left;
+	width	: 140px;	
+	margin-left 		: 0px;
+	margin-top			: 0px;
+	margin-bottom		: 00px;
+	padding-top 		: 00px;
+	padding-bottom 		: 00px;
+	padding-left		: 00px;
+	padding-right		: 00px;
+	
+	color				: red;
+
+	
+}
+
+/*sous menu ppal*/
+.menu1
+{
+	width	: 120px;	
+	margin-left 		: 10px;
+	margin-top			: 0px;
+	margin-bottom		: 20px;
+	
+	border 	: 1px solid yellow;
+	background-color	: navy;
+	padding-top 		: 20px;
+	padding-bottom 		: 20px;
+	padding-left		: 10px;
+	padding-right		: 10px;	
+	
+	color				: red;
+}
+
+/*sous menu secondaire*/
+.menu2
+{
+	width	: 120px;	
+	margin-left 		: 10px;
+	margin-top			: 0px;
+	margin-bottom		: 20px;
+	
+	border 	: 1px solid yellow;
+	background-color	: navy;
+	padding-top 		: 20px;
+	padding-bottom 		: 20px;
+	padding-left		: 10px;
+	padding-right		: 10px;	
+}
+/*Corps de Texte*/
+.body
+{
+	color : yellow;
+	background-color : navy;
+	border : 2px solid yellow;
+	
+	/*margin-top 	: 230px; position relative !!?? */
+	margin-left 	: 170px;
+	margin-right 	: 10px;
+	margin-bottom	: 20px;
+	/*padding : marge intérieure*/
+	padding-top 	: 10px;
+	padding-bottom	: 10px;
+	padding-left 	: 15px;
+	padding-right	: 15px;
+	text-align		: justify;
+}
+
+/* pour le pied de page */
+.footer
+{
+	background-color	: navy;
+	border				: 2px solid yellow;
+	
+	margin-left			: 0px;
+	margin-right		: 0px;
+	margin-top			: 20px;
+	margin-bottom		: 10px;
+	padding-top			: 20px;
+	padding-bottom		: 20px;
+	
+	font-weight			: bold;
+	font-size			: 30px;
+}
+
+/*********************************************************/
+/********************* Les Images ************************/
+
+/* pour les hyperliens*/
+a
+{
+	border-style		: hidden;
+	color 				: red;
+}
+
+/*********************************************************/
+/*****************  Les titres/textes ********************/
+/*pour les liens du sommaire*/
+.sommaire
+{
+	color : red;
+}
+
+.titre
+{
+	text-indent			: 20px;
+	font-weight			: bold;
+	font-size			: 24px;
+}

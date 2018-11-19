@@ -1,0 +1,218 @@
+﻿<?php
+$adminRequired = TRUE;
+include('../Tools/phobida_header.php');
+
+
+  // Relationship has been deleted
+if (isset($_POST['DeleteCateItem'])) {
+  sql_query("DELETE FROM `$SQL_DATABASE`.`$sqlPho_MenuCateItem` WHERE `ID_MenuCateItem`='".PostData('IdCateItem')."'");
+}
+if (isset($_POST['ProcessAddPerItem'])) {
+  $idItem = PostData('MenuItem');
+  $arrayCate = $_POST['MenuCate'];
+  foreach ($arrayCate as $key=>$value){
+    sql_query("INSERT INTO `$SQL_DATABASE`.`$sqlPho_MenuCateItem` VALUES( NULL, '".$value."', '".$idItem."')");
+  }
+}
+if (isset($_POST['ProcessAddPerCate'])) {
+  $idCate = PostData('MenuCate');
+  $arrayItem = $_POST['MenuItem'];
+  foreach ($arrayItem as $key=>$value){
+    sql_query("INSERT INTO `$SQL_DATABASE`.`$sqlPho_MenuCateItem` VALUES( NULL, '".$idCate."', '".$value."')");
+  }
+}
+
+if (isset($_POST['AddPerItem'])){
+  CateItemAddPerItemForm();
+}
+elseif ( isset($_POST['AddPerCate'])){
+  CateItemAddPerCateForm();
+}
+else{
+  CateItemDisplay();
+}
+
+
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Add per Item form
+  // =====================================================================================
+
+function CateItemAddPerItemForm(){
+  GLOBAL $SQL_DATABASE, $sqlPho_MenuCate, $sqlPho_MenuItem, $sqlPho_MenuCateItem;
+  
+  $InputSelect = "  <select name='MenuItem' style='width:50%;'>\n";
+  $InputCheckbox = "";
+  
+  $queryItem = sql_query("SELECT * FROM `$SQL_DATABASE`.`$sqlPho_MenuItem`");
+  $queryCate = sql_query("SELECT * FROM `$SQL_DATABASE`.`$sqlPho_MenuCate`");
+  
+  // all Select
+  while ($aSelect = mysql_fetch_assoc($queryItem)){
+    $InputSelect .= "   <option value='".$aSelect['ID_MenuItem']."'> ".$aSelect['Txt_ItemTitle']." </option>\n";
+  }
+  $InputSelect .= "  </select>\n";
+  
+  // all Checkbox
+  while ($aCheckbox = mysql_fetch_assoc($queryCate)){
+    $InputCheckbox .= "   <input type='checkbox' name='MenuCate[]' value='".$aCheckbox['ID_MenuCate']."'/> ".$aCheckbox['Txt_CateTitle']." \n";
+  }
+  
+  echo("
+  <form method='post' action=''>
+  <div style='text-align:center;margin:2% 0%;'>
+$InputSelect
+  </div>
+$InputCheckbox
+  <div style='text-align:center;margin:2% 0%;'>
+   <input type='submit' name='ProcessAddPerItem' value='Add Relationships' style='width:50%;'/>
+  </div>
+  </form>
+  ");
+}
+
+
+
+
+
+
+
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Add per Cate form
+  // =====================================================================================
+
+function CateItemAddPerCateForm(){
+  GLOBAL $SQL_DATABASE, $sqlPho_MenuCate, $sqlPho_MenuItem, $sqlPho_MenuCateItem;
+  
+  $InputSelect = "  <select name='MenuCate' style='width:50%;'>\n";
+  $InputCheckbox = "";
+  
+  $queryCate = sql_query("SELECT * FROM `$SQL_DATABASE`.`$sqlPho_MenuCate`");
+  $queryItem = sql_query("SELECT * FROM `$SQL_DATABASE`.`$sqlPho_MenuItem`");
+  
+  // all Select
+  while ($aSelect = mysql_fetch_assoc($queryCate)){
+    $InputSelect .= "   <option value='".$aSelect['ID_MenuCate']."'> ".$aSelect['Txt_CateTitle']." </option>\n";
+  }
+  $InputSelect .= "  </select>\n";
+  
+  // all Checkbox
+  while ($aCheckbox = mysql_fetch_assoc($queryItem)){
+    $InputCheckbox .= "   <input type='checkbox' name='MenuItem[]' value='".$aCheckbox['ID_MenuItem']."'/> ".$aCheckbox['Txt_ItemTitle']." \n";
+  }
+  
+  echo("
+  <form method='post' action=''>
+  <div style='text-align:center;margin:2% 0%;'>
+$InputSelect
+  </div>
+$InputCheckbox
+  <div style='text-align:center;margin:2% 0%;'>
+   <input type='submit' name='ProcessAddPerCate' value='Add Relationships' style='width:50%;'/>
+  </div>
+  </form>
+  ");
+}
+
+
+
+
+
+
+
+
+
+
+
+  // =====================================================================================
+  //  >>>>>>>>>>>>>>>>>         Display Table
+  // =====================================================================================
+
+function CateItemDisplay(){
+
+GLOBAL $SQL_DATABASE, $sqlPho_MenuCate, $sqlPho_MenuItem, $sqlPho_MenuCateItem;
+
+$formAdd = "
+  <form method='post'action=''>
+    <input type='submit' name='AddPerItem' value='Add Relationship per Item' style='width:30%'/>
+    <input type='submit' name='AddPerCate' value='Add Relationship per Category' style='width:30%' />
+  </form>";
+
+
+
+$dispTabSingleCate    = "";
+$dispTabSingleCount   = 0;
+$dispTabAllData       = "";
+
+
+$queryCate  = sql_query("
+      SELECT
+        `$sqlPho_MenuCate`.`ID_MenuCate`,
+        `$sqlPho_MenuCate`.`Txt_CateTitle`
+      FROM
+        `$SQL_DATABASE`.`$sqlPho_MenuCate`");
+
+  // for each category
+  while ($aCate = mysql_fetch_assoc($queryCate)){
+    
+    // count the number of items belonging to this category
+    $queryCount = sql_query("
+      SELECT
+        COUNT(`$sqlPho_MenuCateItem`.`Id_MenuItem`)
+      FROM
+        `$SQL_DATABASE`.`$sqlPho_MenuCateItem`
+      WHERE
+        `$sqlPho_MenuCateItem`.`Id_MenuCate` = '".$aCate['ID_MenuCate']."'");
+    $arrayCount = mysql_fetch_assoc($queryCount);
+    
+    // then initialize a row with a rowspan = COUNT for this category
+    $dispTabSingleCate = "   <tr>\n    <td rowspan=".$arrayCount["COUNT(`$sqlPho_MenuCateItem`.`Id_MenuItem`)"]."> ".$aCate['Txt_CateTitle']." </td>\n";
+    
+    // retrieve all the Item belonging to this category
+    $queryItem = sql_query("
+      SELECT
+        `$sqlPho_MenuItem`.`ID_MenuItem`,
+        `$sqlPho_MenuCateItem`.`ID_MenuCateItem`,
+        `$sqlPho_MenuItem`.`Txt_ItemTitle`
+      FROM
+        `$SQL_DATABASE`.`$sqlPho_MenuCateItem`,
+        `$SQL_DATABASE`.`$sqlPho_MenuItem`
+      WHERE
+      `$sqlPho_MenuCateItem`.`Id_MenuCate` = '".$aCate['ID_MenuCate']."' AND
+      `$sqlPho_MenuCateItem`.`Id_MenuItem` = `$sqlPho_MenuItem`.`ID_MenuItem` ");
+    
+    $dispTabSingleCount   = 0;
+    while ($anItem = mysql_fetch_assoc($queryItem)) {
+      
+      if ($dispTabSingleCount > 0){
+        $dispTabSingleCate .= "   <tr>\n";
+      }
+      
+      $dispTabSingleCate .= "    <td> ".$anItem['Txt_ItemTitle']." </td>\n";
+      $dispTabSingleCate .= "    <td> <form method='post' action=''>\n";
+      $dispTabSingleCate .= "      <input type='hidden' name='IdCateItem' value='".$anItem['ID_MenuCateItem']."' />\n";
+      $dispTabSingleCate .= "      <input type='submit' name='DeleteCateItem' value='Delete' />\n";
+      $dispTabSingleCate .= "    </form> </td>\n";
+      
+      $dispTabSingleCount += 1;
+    }
+    
+    $dispTabSingleCate  .= "   </tr>\n";
+    $dispTabAllData     .= $dispTabSingleCate;
+  }
+
+  $dispTabAllData = "  <table border='1' style='margin:auto;'>
+   <tr>
+    <th> Menu Category </th>
+    <th> Menu Item </th>
+    <th> Delete Relationship </th>
+   </tr>
+".$dispTabAllData."
+  </table>";
+  
+  echo $formAdd;
+  echo $dispTabAllData;
+  echo $formAdd;
+}
+
+include('../Tools/phobida_footer.php');
+?>

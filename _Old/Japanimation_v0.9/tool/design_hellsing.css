@@ -1,0 +1,36 @@
+/*********** General **************/
+	body{
+		background-color	: #59041E;
+	}
+	div.page{
+		width				: 800px;
+		margin				: auto;
+		margin-bottom		: 10px;
+		background-color	: #850606;
+		color				: #F7230C;
+		border-style		: double;
+		border-width		: 6px;
+		border-color		: #D69F08;
+	}
+	a{
+		color				: #ED0E60;
+	}
+
+/********** header/footer **************/
+	div.header{
+		width				: 800px;
+		margin				: auto;
+		margin-bottom		: 10px;
+		padding				: 15px 0px;
+		text-align			: left;
+		background-color	: #6D071A;
+		color				: #DB1702;
+		border-style		: double;
+		border-width		: 6px;
+		border-color		: #D69F08;
+	}
+	div.footer{
+		width				: 800px;
+		margin				: auto;
+		text-align			: center;
+	}

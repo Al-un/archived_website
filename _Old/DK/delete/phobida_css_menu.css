@@ -1,0 +1,52 @@
+
+/*
+  - color name are taken from website:  http://www.quackit.com/html/html_color_codes.cfm
+*/
+
+div#PhoMenu{
+  padding       : 1% 2%;
+}
+
+
+/* ===================================================================== */
+/* >>>>>>>>>>>>>>             Menu Category
+/* ===================================================================== */
+div.MenuCate{
+  background    : #f3f2f2;
+  text-align    : center;
+
+}
+
+div.MenuCate p.title{
+  margin        : auto;
+  font-weight   : bold;
+}
+
+
+/* ===================================================================== */
+/* >>>>>>>>>>>>>>             Menu Item
+/* ===================================================================== */
+div.MenuItem{
+  margin        : auto;
+  margin-left   : 5%;
+  margin-top    : 0;
+  margin-bottom : 0;
+}
+
+div.MenuItem p{
+  margin        : auto;
+  width         : 90%;
+}
+
+div.MenuItem p.price{
+  width         : 15%;
+}
+
+
+
+
+
+
+
+
+

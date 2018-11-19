@@ -1,0 +1,28 @@
+body
+{
+	background-color	: black;
+	text-align			: center;
+}
+
+.prec
+{
+	float				: left;
+
+}
+
+.next
+{
+	float				: right;
+
+}
+
+.close
+{
+	text-align			: center;
+}
+/*
+a
+{
+	border				: no-border;
+}
+*/

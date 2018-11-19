@@ -1,0 +1,177 @@
+/* **************************************************************** */
+/*                      SUMMARY                             
+/* **************************************************************** */
+div#summary{
+  margin-top	: 5px;
+  margin-bottom	: 30px;
+}
+
+div#summary table{
+  margin		: auto;
+}
+div#summary table td{
+  width 		: 180px;
+  text-align	: center;
+  border		: 2px inset #024C71;
+}
+div#summary table td:hover{
+  border		: 2px inset #008FD6;
+  background	: #020922;
+}
+div#summary td a{
+  color			: white;
+  text-decoration: none;
+  display		: block;
+  width			: 100%;
+}
+/* **************************************************************** */
+/*                           Home                       
+/* **************************************************************** */
+div#index a{
+  color			: white;
+}
+div#index p{
+  margin		: auto;
+  margin-bottom	: 10px;
+  width			: 90%;
+}
+
+/* **************************************************************** */
+/*                           Profile                         
+/* **************************************************************** */
+div#Profile p{
+  margin		: auto;
+  margin-bottom	: 10px;
+  width			: 90%;
+  text-align	: justify;
+}
+div#Profile p.profile_title{
+  margin		: auto;
+  margin-top	: 20px;
+  margin-bottom	: 10px;
+  text-indent	: 30px;
+  font-size		: 1.2em;
+  border-left	: 1px ridge #008FD6;
+  border-bottom	: 1px ridge #0047D6;
+  background	: #021229;
+  padding		: 3px 0px;
+}
+ul.profile{
+  width			: 80%;
+  margin		: auto;
+  margin-bottom	: 10px;
+}
+/* **************************************************************** */
+/*                           CV                             
+/* **************************************************************** */
+
+div.someData{
+  margin		: auto;
+  margin-bottom	: 15px;
+  width			: 80%;
+  padding		: 10px 4%;
+  border-color	: #000835;
+  border-width	: 4px;
+  border-style	: outset;
+}
+div.someData a{
+  color			: white;
+}
+
+
+p.title{
+  margin		: auto;
+  width			: 90%;
+  border-bottom	: 2px ridge #FFEE00;
+  color			: #FFF67B;
+  text-align	: center;
+  font-size 	: 1.4em;
+  font-family	: "Times New Roman, Times, serif";
+}
+
+/* Details */
+div.detail{
+  display		: none;
+  width			: 90%;
+  margin-left	: 0%;
+}
+div.detail p{
+  text-align	: justify;
+}
+div.detail{
+  border		: 1px ridge yellow;
+  padding		: 5px 20px;
+  margin-top	: 15px;
+  padding-top	: 0px;
+}
+div.detail p.detailLogo{
+  margin		: auto;
+  margin-top	: -12px;
+  margin-left	: 30px;
+  padding		: 2px;
+  padding-left	: 8px;
+  border		: 1px ridge yellow;
+  width			: 100px;
+  z-index		: 1;
+  background	: #020922;
+}
+
+
+/* Education */
+div#SchoolData table{
+  padding		: 4px;
+  font-size		: 1em;
+}
+div#SchoolData table td{
+  padding		: 0px 5px;
+  min-width		: 60px;
+}
+
+
+/* ItData*/
+div#ItData table{
+  margin		: auto;
+  font-size		: 1em;
+}
+div#ItData td{
+  padding		: 0px 20px;
+}
+
+
+/* Linguisitique*/
+div#LangData table{
+  margin		: auto;
+  padding		: 4px;
+  font-size		: 1em;
+}
+div#LangData table td{
+  padding		: 0px 20px;
+}
+
+
+/* Centre intérêts */
+div#LeisureData ul{
+  list-style-type: none;
+}
+
+
+
+/* **************************************************************** */
+/*                           Contact                            
+/* **************************************************************** */
+div#Contact div.someData table{
+  margin		: auto;
+  font-size		: 1.0em;
+}
+div#Contact div.someData table td{
+  padding		: 2px 20px;
+}
+div#Contact p{
+  margin		: auto;
+  margin-bottom	: 20px;
+  width			: 90%;
+}
+
+
+
+	

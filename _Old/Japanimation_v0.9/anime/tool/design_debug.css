@@ -1,0 +1,39 @@
+	body{
+		background-color	: green;
+	}
+	
+	.tablo td{
+		width				: 100px;
+	}
+
+	div.page{
+	 	width				: 900px;
+	 	height				: 2500px;
+	 	margin				: auto;
+		background-color	: blue;
+		color				: yellow;
+	}
+	
+	div.sommaire{
+	 	margin-top			: 200px;
+		position			: relative;
+		height				: 200px;
+		width				: 600px;
+		border				: 3px solid white;
+	}
+	.sommaire div{
+		position			: absolute;
+		width				: 250px;
+		background-color	: red;
+		border				: 2px outset yellow;
+		vertical-align		: middle;
+		margin-top			: 5px;
+		margin-bottom		: 5px;
+		
+	}
+	.sommaire p{
+		margin-top			: auto;
+		vertical-align		: middle;
+		text-align			: center;	
+	}
+	

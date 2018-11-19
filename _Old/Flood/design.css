@@ -1,0 +1,77 @@
+/** pour tout le monde **/	
+	body{
+	 	width			: 1000px;
+	 	margin			: auto;
+	 	padding-top		: 10px;
+	 	padding-bottom	: 200px;
+	 
+	 	
+	 	background-color: #4D0087;
+	 	color			: #87E6ED;
+	 	border			: #000362 1px solid;
+	}
+	
+	a{
+	 	color			: #87E6ED;
+	 	text-decoration	: none;
+	 }
+
+/** pour la bannière **/
+	div.header{
+	 	margin-top		: 10px;
+	 	margin-bottom	: 20px;
+	 	text-align		: center;
+	 }	 
+	a img{
+	 	border			: none;
+	 }
+/** pour le SOMMAIRE à gauche **/
+	div.sommaire{
+	 	float			: left;
+	 	width			: 150px;
+	 	margin-left		: 15px;
+	 	padding			: 15px;
+	 	background		: url('menu.png');
+	 	background-repeat : y-repeat;
+	 	border			: groove 1px #DB037D;
+	 }
+/** pour le corps de page **/
+	div.corps{
+	 	margin-left		: 220px;
+	 	padding			: 10px;
+	 	paddingètop		: 30px;
+	 	padding-bottom	: 30px;
+	 	border			: double 4px #DB037D;
+	 }
+	 
+	
+/** affiche des POST **/
+	td.pseudo{
+	 	width 			: 200px;
+	 	height			: 20px;
+	 	padding			: 5px;
+	 	padding-left	: 25px;
+	 	background-color: #720982;
+	 }
+	td.date{
+	 	width			: 700px;
+	 	height			: 20px;
+	 	padding			: 5px;
+	 	background-color: #720982;
+	 }
+	 td.post{
+	  	width			: 700px;
+	  	padding			: 20px;
+	  	padding-top		: 20px;
+	  	padding-bottom	: 20px;
+	  	background-color: #7205BA;
+	}
+	
+/** création des post **/
+	table.input{
+	 	margin			: auto;
+	}
+	td.input{
+		padding 		: 10px; 
+	 }
+	
